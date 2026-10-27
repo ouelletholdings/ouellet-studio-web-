@@ -47,3 +47,5 @@ Commission inquiries submitted through the site's intake form are reviewed by th
 ## Deployment
 
 Static site, zero build step. Deploy by serving these files from the domain root — any static host (Vercel, Netlify, Cloudflare Pages, GitHub Pages) works. Point `www.ouelletstudio.com` (and a redirect from the bare `ouelletstudio.com`) at the deployment.
+
+This repo is connected to Vercel's GitHub integration: every push to `main` builds and deploys to production automatically.
