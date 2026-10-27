@@ -1,0 +1,7 @@
+# Ouellet Studio — Search & AI Crawler Directives
+User-agent: *
+Allow: /
+
+# Sitemap & AI Ingestion Directives
+Sitemap: https://www.ouelletstudio.com/sitemap.xml
+LLMSTxt: https://www.ouelletstudio.com/llms.txt
