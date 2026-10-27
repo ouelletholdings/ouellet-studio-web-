@@ -44,6 +44,7 @@ Commission inquiries submitted through the site's intake form are reviewed by th
 | `llms.txt` | Plain-text ingestion index for AI assistants and answer engines (SearchGPT, Perplexity, Claude, Gemini), per the emerging `llms.txt` convention. |
 | `sitemap.xml` | Single-entry XML sitemap (this is a one-page site) for Google Search Console and other crawlers. |
 | `favicon.ico`, `favicon.svg`, `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`, `android-chrome-192x192.png`, `android-chrome-512x512.png`, `site.webmanifest` | The Ouellet Studio "O" monogram favicon set — vector master + every required raster/legacy size, wired up via the `<link>` tags in `index.html`'s `<head>`. |
+| `robots.txt` | Crawler directives — allows all, points to `sitemap.xml` and `llms.txt` at root. |
 | `README.md` | This file. |
 
 ## Deployment
