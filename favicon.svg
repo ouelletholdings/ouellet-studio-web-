@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Ouellet Studio monogram">
+  <title>Ouellet Studio — O monogram</title>
+  <rect x="0" y="0" width="512" height="512" fill="#EDE6DA"/>
+  <path d="M 419.635,256.000 A 163.635,194.560 0 1 0 92.365,256.000 A 163.635,194.560 0 1 0 419.635,256.000 Z M 354.251,256.000 A 98.251,177.934 0 1 0 157.749,256.000 A 98.251,177.934 0 1 0 354.251,256.000 Z" fill="#0E1621" fill-rule="evenodd"/>
+  <path d="M 341.164,256.000 A 85.164,163.010 0 1 0 170.836,256.000 A 85.164,163.010 0 1 0 341.164,256.000 Z M 339.103,256.000 A 83.103,160.967 0 1 0 172.897,256.000 A 83.103,160.967 0 1 0 339.103,256.000 Z" fill="#C9B37E" fill-rule="evenodd"/>
+</svg>

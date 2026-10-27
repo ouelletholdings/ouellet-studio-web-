@@ -43,6 +43,7 @@ Commission inquiries submitted through the site's intake form are reviewed by th
 | `image_4.jpg` | The OpenGraph / Twitter Card social preview image (1200×630 JPEG — re-encoded from the original PNG to keep the file small), referenced by absolute URL in `index.html`'s `<head>`. Must stay side-by-side with `index.html` at the site root so `https://www.ouelletstudio.com/image_4.jpg` resolves. |
 | `llms.txt` | Plain-text ingestion index for AI assistants and answer engines (SearchGPT, Perplexity, Claude, Gemini), per the emerging `llms.txt` convention. |
 | `sitemap.xml` | Single-entry XML sitemap (this is a one-page site) for Google Search Console and other crawlers. |
+| `favicon.ico`, `favicon.svg`, `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`, `android-chrome-192x192.png`, `android-chrome-512x512.png`, `site.webmanifest` | The Ouellet Studio "O" monogram favicon set — vector master + every required raster/legacy size, wired up via the `<link>` tags in `index.html`'s `<head>`. |
 | `README.md` | This file. |
 
 ## Deployment
