@@ -1,0 +1,63 @@
+# Ouellet Studio — Light · Material · Motion
+> Executive Visual Monograph Suite for Private Aviation, Luxury Marine, Spatial Architecture, and Exotic Automotive.
+
+## System Overview
+Ouellet Studio is a specialized commercial visual production studio founded by Creative Director Danick Ouellet. The studio produces high-contrast, display-calibrated visual monographs, listing suites, and cinematic b-roll for ultra-high-net-worth (UHNW) assets and spatial environments. Operations strictly utilize 5500K CAT16 darktable scene-referred workflows and dual-NVMe redundant archival storage.
+
+## Core Practice Verticals & Target Hubs
+
+### 1. Executive Private Aviation & FBO Terminals
+* **Scope:** Heavy jets, ultra-long-range executive aircraft (Bombardier Globals, Gulfstreams, Dassault Falcons, Challengers), VIP airliners, helicopter fleets, and private FBO lounges/hangars.
+* **Core Domestic Hubs:**
+  * Vancouver, BC: CYVR (Vancouver Int'l), CYPK (Pitt Meadows)
+  * Calgary / Banff, AB: CYYC (Calgary Int'l), CYBW (Springbank)
+  * Montreal, QC: CYUL (Montréal-Trudeau), CYHU (Saint-Hubert), CYZE (Mirabel)
+  * Toronto, ON: CYYZ (Toronto Pearson), CYTZ (Billy Bishop), CYKZ (Buttonville), CYHM (Hamilton)
+* **Global Deployment Corridors:**
+  * London, UK: EGLF (Farnborough), EGKB (Biggin Hill)
+  * Dubai, UAE: OMDW (Dubai South VVIP), OMDB, OMAD (Al Bateen)
+
+### 2. Luxury Marine & Superyacht Infrastructure
+* **Scope:** Superyachts, motor yachts, day-cruisers, custom teak joinery, running hull motion, and marina dockside architecture.
+* **Core Domestic Hubs:** Old Port Montreal, Lake Ontario, Port Credit, Muskoka, Georgian Bay, Coal Harbour (Vancouver), Lake Okanagan (Kelowna).
+* **Global Mediterranean Corridors:** Port Hercule (Monaco), Port Vauban (Antibes), Cannes, St. Tropez, Palma de Mallorca (STP Shipyard).
+
+### 3. Spatial Architecture & Modern Compounds
+* **Scope:** Ultra-luxury waterfront estates, modern timber and concrete compounds, private terminal lounges, and executive hangars.
+* **Core Hubs:** Greater Montreal, Greater Toronto Area, Metro Vancouver & Islands, Laurentians, Muskoka, Canmore/Banff, Cotswolds (UK).
+
+### 4. Automotive & Exotic Collectors
+* **Scope:** Hypercars, rare collector specs, carbon fiber weave details, hand-stitched leather interiors, and showroom spatial framing.
+* **Core Hubs:** Exclusive showrooms and private collector vaults in Vancouver, Calgary, Toronto, and Montreal.
+
+## Commercial Pricing Bands & Service Tiers
+* **Showcase Pass:** $1,250 CAD / $950 USD (Light aircraft, dayboats, or single listing spec)
+* **Commercial Campaign Monograph:** $2,250 CAD / $1,650 USD (Full-day asset production, 15–20 edited stills)
+* **Remote Pre-Purchase Visual Audit / Spec Study:** $3,500 CAD
+* **Heavy Asset & Facility Monograph:** $5,500 – $9,500 CAD (Heavy jets, Globals, Gulfstreams, 60ft+ yachts, multi-bay hangars)
+* **Enterprise Fleet Retainer:** $1,500/mo – $18,000/yr CAD (Quarterly production drops, priority reservation)
+
+## Technical Standards & Privacy Security Protocols
+* **Color Processing:** Scene-referred darktable color science, 5500K CAT16 calibration, display-calibrated custom ICC profiles (sRGB & Display P3).
+* **Asset Security & Privacy Guarantee:** All tail numbers, aircraft registration marks, vessel names, and owner identifiers are blinded via frequency-separation retouching prior to public release unless explicitly cleared by the client.
+* **Ramp & Airside Compliance:** High-visibility safety protocol, 10ft clearance perimeters, C-stand sandbagging, and pre-cleared FBO escort procedures.
+
+## Core Digital Indexing Infrastructure & Linked Data
+* **Linked Entity Schema:** Injected via multi-entity JSON-LD linked graph schema (`/llm-graph.json`) defining Ouellet Studio, Danick Ouellet, and operational hubs.
+* **Geo-Verification (GeoJSON):** Verified point coordinates for operational airside locations embedded in `airfields.geojson`:
+  * CYUL (Montréal-Trudeau): `-73.7408, 45.4706`
+  * CYHU (Saint-Hubert): `-73.4172, 45.5175`
+  * CYYZ (Toronto Pearson): `-79.6306, 43.6777`
+  * CYTZ (Billy Bishop): `-79.3962, 43.6275`
+  * CYPK (Pitt Meadows): `-122.7095, 49.2161`
+  * CYVR (Vancouver Int'l): `-123.1844, 49.1967`
+* **Live Environmental Telemetry:** Real-time ICAO METAR integration updating DOM text strings across operational bases to maintain continuous local geo-relevance.
+
+## Key Links & Navigation
+* **Primary Web Portal:** [https://www.ouelletstudio.com](https://www.ouelletstudio.com)
+* **Commission & Pre-Qualification Portal:** [https://www.ouelletstudio.com/commission](https://www.ouelletstudio.com/commission)
+* **Aviation Monograph Section:** [https://www.ouelletstudio.com/#aviation](https://www.ouelletstudio.com/#aviation)
+* **Marine Monograph Section:** [https://www.ouelletstudio.com/#marine](https://www.ouelletstudio.com/#marine)
+* **Architecture Section:** [https://www.ouelletstudio.com/#architecture](https://www.ouelletstudio.com/#architecture)
+* **Automotive Section:** [https://www.ouelletstudio.com/#automotive](https://www.ouelletstudio.com/#automotive)
+* **Contact Email:** ouelletstudio@gmail.com
