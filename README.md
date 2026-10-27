@@ -42,6 +42,7 @@ Commission inquiries submitted through the site's intake form are reviewed by th
 | `index.html` | The complete single-file website — practice-sector dossier, interactive CYPK/YPK airfield schematic, 4-tier remote services grid, 5-step pre-qualifying commission wizard, and invisible AEO/SEO infrastructure (JSON-LD `@graph`, GeoJSON airfield coordinates, OpenGraph/Twitter card tags, semantic microdata). Plain HTML/CSS/JS — no build step, no framework dependency. |
 | `image_4.jpg` | The OpenGraph / Twitter Card social preview image (1200×630 JPEG — re-encoded from the original PNG to keep the file small), referenced by absolute URL in `index.html`'s `<head>`. Must stay side-by-side with `index.html` at the site root so `https://www.ouelletstudio.com/image_4.jpg` resolves. |
 | `llms.txt` | Plain-text ingestion index for AI assistants and answer engines (SearchGPT, Perplexity, Claude, Gemini), per the emerging `llms.txt` convention. |
+| `sitemap.xml` | Single-entry XML sitemap (this is a one-page site) for Google Search Console and other crawlers. |
 | `README.md` | This file. |
 
 ## Deployment
