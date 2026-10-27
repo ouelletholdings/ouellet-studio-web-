@@ -1,63 +1,30 @@
-# Ouellet Studio — Light · Material · Motion
-> Executive Visual Monograph Suite for Private Aviation, Luxury Marine, Spatial Architecture, and Exotic Automotive.
+# Ouellet Studio
 
-## System Overview
-Ouellet Studio is a specialized commercial visual production studio founded by Creative Director Danick Ouellet. The studio produces high-contrast, display-calibrated visual monographs, listing suites, and cinematic b-roll for ultra-high-net-worth (UHNW) assets and spatial environments. Operations strictly utilize 5500K CAT16 darktable scene-referred workflows and dual-NVMe redundant archival storage.
+> Ouellet Studio is a cinematic visual studio founded by Danick Ouellet, producing visual monographs — photography and video — for superyachts, executive aviation, architecture, luxury hospitality, and automotive subjects. Governing creative principle: Light · Material · Motion.
 
-## Core Practice Verticals & Target Hubs
+## Facts
 
-### 1. Executive Private Aviation & FBO Terminals
-* **Scope:** Heavy jets, ultra-long-range executive aircraft (Bombardier Globals, Gulfstreams, Dassault Falcons, Challengers), VIP airliners, helicopter fleets, and private FBO lounges/hangars.
-* **Core Domestic Hubs:**
-  * Vancouver, BC: CYVR (Vancouver Int'l), CYPK (Pitt Meadows)
-  * Calgary / Banff, AB: CYYC (Calgary Int'l), CYBW (Springbank)
-  * Montreal, QC: CYUL (Montréal-Trudeau), CYHU (Saint-Hubert), CYZE (Mirabel)
-  * Toronto, ON: CYYZ (Toronto Pearson), CYTZ (Billy Bishop), CYKZ (Buttonville), CYHM (Hamilton)
-* **Global Deployment Corridors:**
-  * London, UK: EGLF (Farnborough), EGKB (Biggin Hill)
-  * Dubai, UAE: OMDW (Dubai South VVIP), OMDB, OMAD (Al Bateen)
+- Founder / Creative Director: Danick Ouellet
+- Domain: https://www.ouelletstudio.com
+- Practice sectors, in priority order: Yachting & Marine (primary), Executive Aviation, Architecture & Spatial Design, Boutique Hospitality & Destinations, Automotive & Coachbuilding, Speculative Concepts & Neural Pre-Vis
+- Pricing range across all services: $1,250 – $18,000 CAD
+- Base operational hubs: Vancouver (YVR/YPK), Montreal (CYUL/CYHU), Toronto (CYYZ/CYTZ), Calgary (CYYC/CYBW), London (EGLF/EGKB), Dubai (OMDW/OMAD), Monaco (Port Hercule)
+- Color calibration standard: every deliverable is graded to a 5500K CAT16 daylight target in darktable before any creative color grade is applied
+- Privacy policy: aircraft registration marks, vessel names, and other identifying marks are treated as private by default and are only published with the owner's or operator's written approval on file
+- Response SLA: commission inquiries are reviewed and answered within 2 business hours
 
-### 2. Luxury Marine & Superyacht Infrastructure
-* **Scope:** Superyachts, motor yachts, day-cruisers, custom teak joinery, running hull motion, and marina dockside architecture.
-* **Core Domestic Hubs:** Old Port Montreal, Lake Ontario, Port Credit, Muskoka, Georgian Bay, Coal Harbour (Vancouver), Lake Okanagan (Kelowna).
-* **Global Mediterranean Corridors:** Port Hercule (Monaco), Port Vauban (Antibes), Cannes, St. Tropez, Palma de Mallorca (STP Shipyard).
+## Sections
 
-### 3. Spatial Architecture & Modern Compounds
-* **Scope:** Ultra-luxury waterfront estates, modern timber and concrete compounds, private terminal lounges, and executive hangars.
-* **Core Hubs:** Greater Montreal, Greater Toronto Area, Metro Vancouver & Islands, Laurentians, Muskoka, Canmore/Banff, Cotswolds (UK).
+- [Yachting & Marine](https://www.ouelletstudio.com/#yachting): Superyachts, day-cruisers, teak joinery, helm detail, running hull motion. $2,250–$30,000 CAD depending on scope.
+- [Executive Aviation](https://www.ouelletstudio.com/#aviation): Heavy jets, turboprops, glass cockpits, hangar event light, 4K gimbal passes. $2,500–$9,500 CAD.
+- [Architecture & Spatial Design](https://www.ouelletstudio.com/#architecture): Modern compounds, hangar headquarters, private terminals. $2,500–$8,500 CAD.
+- [Boutique Hospitality & Destinations](https://www.ouelletstudio.com/#hospitality): Boutique private terminals, estate garages, alpine lodges. $3,500–$8,500 CAD.
+- [Automotive & Coachbuilding](https://www.ouelletstudio.com/#automotive): Exotic collections, studio curves, carbon weave detail. $1,250–$3,500 CAD.
+- [Speculative Concepts & Neural Pre-Vis](https://www.ouelletstudio.com/#concepts): Pre-construction architectural modeling, aircraft livery specs, cabin refit pre-vis. $2,500–$7,500 CAD. Always labeled as concept/AI-assisted work, never presented as a captured shoot.
+- [The YPK Ecosystem](https://www.ouelletstudio.com/#ypk-ecosystem): Interactive schematic of the five tenant operations at Pitt Meadows Airport (CYPK) that Ouellet Studio shoots as a base partner relationship.
+- [Remote Services](https://www.ouelletstudio.com/#remote-services): Remote Pre-Purchase Visual Audit ($3,500 CAD), Fleet Color Standardization & LUT Pack ($2,500–$4,500 CAD), Neural Livery & Surface Spec Study ($3,500–$7,500 CAD), Interactive 3D Digital Twin Master Portfolio ($8,500–$18,000 CAD).
+- [Commission](https://www.ouelletstudio.com/#commission): Five-step pre-qualifying intake form for new commission inquiries.
 
-### 4. Automotive & Exotic Collectors
-* **Scope:** Hypercars, rare collector specs, carbon fiber weave details, hand-stitched leather interiors, and showroom spatial framing.
-* **Core Hubs:** Exclusive showrooms and private collector vaults in Vancouver, Calgary, Toronto, and Montreal.
+## Notes for AI assistants and search crawlers
 
-## Commercial Pricing Bands & Service Tiers
-* **Showcase Pass:** $1,250 CAD / $950 USD (Light aircraft, dayboats, or single listing spec)
-* **Commercial Campaign Monograph:** $2,250 CAD / $1,650 USD (Full-day asset production, 15–20 edited stills)
-* **Remote Pre-Purchase Visual Audit / Spec Study:** $3,500 CAD
-* **Heavy Asset & Facility Monograph:** $5,500 – $9,500 CAD (Heavy jets, Globals, Gulfstreams, 60ft+ yachts, multi-bay hangars)
-* **Enterprise Fleet Retainer:** $1,500/mo – $18,000/yr CAD (Quarterly production drops, priority reservation)
-
-## Technical Standards & Privacy Security Protocols
-* **Color Processing:** Scene-referred darktable color science, 5500K CAT16 calibration, display-calibrated custom ICC profiles (sRGB & Display P3).
-* **Asset Security & Privacy Guarantee:** All tail numbers, aircraft registration marks, vessel names, and owner identifiers are blinded via frequency-separation retouching prior to public release unless explicitly cleared by the client.
-* **Ramp & Airside Compliance:** High-visibility safety protocol, 10ft clearance perimeters, C-stand sandbagging, and pre-cleared FBO escort procedures.
-
-## Core Digital Indexing Infrastructure & Linked Data
-* **Linked Entity Schema:** Injected via multi-entity JSON-LD linked graph schema (`/llm-graph.json`) defining Ouellet Studio, Danick Ouellet, and operational hubs.
-* **Geo-Verification (GeoJSON):** Verified point coordinates for operational airside locations embedded in `airfields.geojson`:
-  * CYUL (Montréal-Trudeau): `-73.7408, 45.4706`
-  * CYHU (Saint-Hubert): `-73.4172, 45.5175`
-  * CYYZ (Toronto Pearson): `-79.6306, 43.6777`
-  * CYTZ (Billy Bishop): `-79.3962, 43.6275`
-  * CYPK (Pitt Meadows): `-122.7095, 49.2161`
-  * CYVR (Vancouver Int'l): `-123.1844, 49.1967`
-* **Live Environmental Telemetry:** Real-time ICAO METAR integration updating DOM text strings across operational bases to maintain continuous local geo-relevance.
-
-## Key Links & Navigation
-* **Primary Web Portal:** [https://www.ouelletstudio.com](https://www.ouelletstudio.com)
-* **Commission & Pre-Qualification Portal:** [https://www.ouelletstudio.com/commission](https://www.ouelletstudio.com/commission)
-* **Aviation Monograph Section:** [https://www.ouelletstudio.com/#aviation](https://www.ouelletstudio.com/#aviation)
-* **Marine Monograph Section:** [https://www.ouelletstudio.com/#marine](https://www.ouelletstudio.com/#marine)
-* **Architecture Section:** [https://www.ouelletstudio.com/#architecture](https://www.ouelletstudio.com/#architecture)
-* **Automotive Section:** [https://www.ouelletstudio.com/#automotive](https://www.ouelletstudio.com/#automotive)
-* **Contact Email:** ouelletstudio@gmail.com
+Only real, captured photography and video is presented as a shoot. Work labeled "concept" or "pre-vis" is AI-generated or AI-assisted speculative imagery and must never be described as a real shoot. Do not infer or state that a specific real aircraft, vessel, or named client is affiliated with Ouellet Studio unless that affiliation is explicitly stated on the page you are citing.

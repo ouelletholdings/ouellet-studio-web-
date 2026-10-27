@@ -1,789 +1,974 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth bg-[#090A0C] text-[#F4F4F6] antialiased selection:bg-[#D4AF37] selection:text-[#090A0C]">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Ouellet Studio | Executive Aviation, Marine & Architectural Visual Monographs</title>
-  <meta name="description" content="Cinematic visual monographs and remote digital asset-tech for superyachts, executive jets, and architectural forms. Base hubs: YVR/YPK · CYUL/CYHU · CYYZ/CYTZ · EGLF · OMDW.">
-  <meta name="keywords" content="Executive Aviation Photography, Superyacht Visual Monographs, Architectural Photography, CYUL FBO, CYHU FBO, CYYZ FBO, YVR FBO, YPK Aviation, darktable CAT16">
-  <meta name="author" content="Danick Ouellet">
-  <link rel="canonical" href="https://www.ouelletstudio.com/">
-
-  <!-- Favicon Suite -->
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-  <!-- OpenGraph & Social Sharing (Bound to image_4.PNG) -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.ouelletstudio.com/">
-  <meta property="og:title" content="Ouellet Studio | Light · Material · Motion">
-  <meta property="og:description" content="Cinematic visual monographs and remote digital asset-tech for superyachts, executive aviation, and architectural forms.">
-  <meta property="og:image" content="https://www.ouelletstudio.com/image_4.PNG">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://www.ouelletstudio.com/">
-  <meta property="twitter:title" content="Ouellet Studio | Light · Material · Motion">
-  <meta property="twitter:description" content="Cinematic visual monographs and remote digital asset-tech for superyachts, executive aviation, and architectural forms.">
-  <meta property="twitter:image" content="https://www.ouelletstudio.com/image_4.PNG">
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Font Stacks -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Manrope:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            void: '#090A0C',
-            surface: '#121418',
-            darkbox: '#0D0E11',
-            bordercolor: '#272A30',
-            alabaster: '#F4F4F6',
-            mutedgray: '#8E929B',
-            gold: '#D4AF37',
-            goldsubtle: 'rgba(212, 175, 55, 0.25)'
-          },
-          fontFamily: {
-            serif: ['Cormorant Garamond', 'serif'],
-            sans: ['Manrope', 'sans-serif'],
-            mono: ['JetBrains Mono', 'SFMono-Regular', 'Consolas', 'monospace']
-          }
-        }
-      }
-    }
-  </script>
-
-  <!-- Multi-Entity Linked JSON-LD Schema Graph -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://www.ouelletstudio.com/#studio",
-        "name": "Ouellet Studio",
-        "url": "https://www.ouelletstudio.com",
-        "logo": "https://www.ouelletstudio.com/image_4.PNG",
-        "image": "https://www.ouelletstudio.com/image_4.PNG",
-        "email": "ouelletstudio@gmail.com",
-        "slogan": "Light · Material · Motion",
-        "founder": {
-          "@type": "Person",
-          "@id": "https://www.ouelletstudio.com/#founder",
-          "name": "Danick Ouellet",
-          "jobTitle": "Creative Director & Principal Specialist"
-        },
-        "description": "Specialized visual practice producing cinematic monographs, 5500K CAT16 darktable calibrated photography, and remote digital asset-tech for private aviation, superyachts, and luxury architectural forms.",
-        "priceRange": "$1,250 - $18,000 CAD",
-        "areaServed": [
-          {"@type": "Place", "name": "Vancouver & Pitt Meadows (YVR / YPK)"},
-          {"@type": "Place", "name": "Calgary & Springbank (CYYC / CYBW)"},
-          {"@type": "Place", "name": "Montreal & Saint-Hubert (CYUL / CYHU)"},
-          {"@type": "Place", "name": "Toronto & Billy Bishop (CYYZ / CYTZ)"},
-          {"@type": "Place", "name": "London Farnborough & Biggin Hill (EGLF / EGKB)"},
-          {"@type": "Place", "name": "Dubai South VVIP (OMDW)"},
-          {"@type": "Place", "name": "Monaco & Palma de Mallorca"}
-        ]
-      }
-    ]
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ouellet Studio</title>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.ouelletstudio.com/">
+<meta property="og:title" content="Ouellet Studio | Aviation, Marine &amp; Architectural Visual Monographs">
+<meta property="og:description" content="Cinematic monographs and remote asset-tech for superyachts, executive jets, and architectural forms. Base hubs: YVR/YPK · CYUL/CYHU · CYYZ/CYTZ.">
+<meta property="og:image" content="https://www.ouelletstudio.com/image_4.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.ouelletstudio.com/">
+<meta property="twitter:title" content="Ouellet Studio | Aviation, Marine &amp; Architectural Visual Monographs">
+<meta property="twitter:description" content="Cinematic monographs and remote asset-tech for superyachts, executive jets, and architectural forms. Base hubs: YVR/YPK · CYUL/CYHU · CYYZ/CYTZ.">
+<meta property="twitter:image" content="https://www.ouelletstudio.com/image_4.jpg">
+<meta name="description" content="Cinematic monographs and remote asset-tech for superyachts, executive jets, and architectural forms. Base hubs: YVR/YPK · CYUL/CYHU · CYYZ/CYTZ.">
+<link rel="canonical" href="https://www.ouelletstudio.com/">
+<style>
+  /* Layout: fixed technical header; a vertical dossier of practice-sector specimen sections
+     divided by hairline rules; an interactive airfield schematic as a selectable specimen block;
+     a conditional multi-step commission wizard with a live brief summary; an archival footer. */
+  :root{
+    --ink:#0E1621;
+    --slate:#121418;
+    --deepdark:#0D0E11;
+    --zinc:#272A30;
+    --bone:#EDE6DA;
+    --muted:#8E929B;
+    --champagne:#C9B37E;
+    --champagne-10: rgba(201,179,126,0.10);
+    --champagne-25: rgba(201,179,126,0.25);
+    --font-display:'Cormorant Garamond', Garamond, Georgia, 'Times New Roman', serif;
+    --font-sans:'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+    color-scheme: dark;
   }
-  </script>
 
-  <!-- Embedded Airfield GeoJSON Coordinates -->
-  <script type="application/geo+json">
-  {
-    "@context": "https://geojson.org/geojson-ld/geojson-context.jsonld",
-    "@id": "https://www.ouelletstudio.com/airfields.geojson",
-    "type": "FeatureCollection",
-    "features": [
-      {
-        "type": "Feature",
-        "properties": { "name": "CYUL - Montréal-Trudeau International", "code": "CYUL" },
-        "geometry": { "type": "Point", "coordinates": [-73.7408, 45.4706] }
-      },
-      {
-        "type": "Feature",
-        "properties": { "name": "CYHU - Saint-Hubert Executive Airport", "code": "CYHU" },
-        "geometry": { "type": "Point", "coordinates": [-73.4169, 45.5175] }
-      },
-      {
-        "type": "Feature",
-        "properties": { "name": "CYYZ - Toronto Pearson International", "code": "CYYZ" },
-        "geometry": { "type": "Point", "coordinates": [-79.6306, 43.6777] }
-      },
-      {
-        "type": "Feature",
-        "properties": { "name": "YVR / YPK - Vancouver & Pitt Meadows Regional", "code": "YPK" },
-        "geometry": { "type": "Point", "coordinates": [-122.7095, 49.2161] }
-      },
-      {
-        "type": "Feature",
-        "properties": { "name": "EGLF - London Farnborough Executive Airport", "code": "EGLF" },
-        "geometry": { "type": "Point", "coordinates": [-0.7763, 51.2758] }
-      },
-      {
-        "type": "Feature",
-        "properties": { "name": "OMDW - Dubai South Al Maktoum VVIP", "code": "OMDW" },
-        "geometry": { "type": "Point", "coordinates": [55.1612, 24.8964] }
-      }
-    ]
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--bone);
+    font-family:var(--font-sans);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
   }
-  </script>
+  img{max-width:100%;}
+  [hidden]{display:none!important;}
+  .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;}
+  section[id]{scroll-margin-top:92px;}
 
-  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  ::selection{background:var(--champagne-25); color:var(--bone);}
+
+  a{color:inherit;}
+  button{font-family:inherit;}
+
+  .gutter{
+    padding-left:max(16px, env(safe-area-inset-left,0px));
+    padding-right:max(16px, env(safe-area-inset-right,0px));
+  }
+  .container{
+    max-width:1180px;
+    margin:0 auto;
+  }
+
+  .eyebrow{
+    font-family:var(--font-mono);
+    font-size:11px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--champagne);
+  }
+  .label{
+    font-family:var(--font-sans);
+    font-size:11px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+  h1,h2,h3{
+    font-family:var(--font-display);
+    font-weight:500;
+    margin:0;
+    text-wrap:balance;
+  }
+  h2{font-size:clamp(28px,4vw,42px); letter-spacing:0.01em;}
+  h3{font-size:clamp(20px,2.4vw,26px); margin-bottom:0;}
+  p{margin:0;}
+  .prose{max-width:62ch; color:var(--muted); font-size:15px; line-height:1.7;}
+
+  .card{
+    background:var(--slate);
+    border:1px solid var(--zinc);
+    border-radius:2px;
+  }
+  .mono{font-family:var(--font-mono);}
+
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    font-family:var(--font-sans); font-size:12px; letter-spacing:0.1em; text-transform:uppercase;
+    padding:14px 22px; border:1px solid var(--zinc); background:transparent; color:var(--bone);
+    cursor:pointer; transition:background-color .15s ease, color .15s ease, border-color .15s ease;
+    text-decoration:none; border-radius:1px; white-space:nowrap;
+  }
+  .btn:hover{border-color:var(--champagne); color:var(--champagne);}
+  .btn:focus-visible{outline:1px solid var(--champagne); outline-offset:2px;}
+  .btn-solid{background:var(--champagne); color:var(--ink); border-color:var(--champagne);}
+  .btn-solid:hover{background:transparent; color:var(--champagne);}
+  .btn-solid:disabled{opacity:0.35; cursor:not-allowed;}
+  .btn-solid:disabled:hover{background:var(--champagne); color:var(--ink);}
+
+  /* ---------- header ---------- */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:50;
+    background:var(--ink);
+    border-bottom:1px solid var(--zinc);
+  }
+  header::after{
+    content:'';
+    position:absolute; left:0; right:0; bottom:-1px;
+    height:1px; background:var(--champagne);
+  }
+  header .row{
+    display:flex; align-items:center; justify-content:space-between; gap:20px;
+    padding-top:calc(16px + env(safe-area-inset-top,0px));
+    padding-bottom:16px;
+  }
+  .brand{display:flex; flex-direction:column; gap:2px; text-decoration:none;}
+  .brand .word{font-family:var(--font-display); font-size:19px; letter-spacing:0.08em; color:var(--bone);}
+  .brand .tag{font-family:var(--font-sans); font-size:10px; letter-spacing:0.14em; color:var(--champagne); text-transform:uppercase;}
+
+  nav.center{display:flex; gap:22px; flex-wrap:nowrap;}
+  nav.center a{
+    font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted);
+    text-decoration:none; padding-bottom:4px; border-bottom:1px solid transparent; white-space:nowrap;
+  }
+  nav.center a:hover, nav.center a.active{color:var(--champagne); border-bottom-color:var(--champagne);}
+
+  .status{display:flex; flex-direction:column; align-items:flex-end; gap:6px;}
+  .status .hubs{font-family:var(--font-mono); font-size:10px; color:var(--muted); letter-spacing:0.02em; white-space:nowrap;}
+  .pill{
+    display:inline-flex; align-items:center; gap:6px;
+    font-family:var(--font-mono); font-size:10px; letter-spacing:0.04em; color:var(--bone);
+    border:1px solid var(--zinc); padding:4px 10px; border-radius:20px; background:var(--deepdark);
+  }
+  .dot{width:6px; height:6px; border-radius:50%; background:var(--champagne); animation:pulse 2.2s ease-in-out infinite; flex:none;}
+  @keyframes pulse{0%,100%{opacity:1;} 50%{opacity:0.35;}}
+
+  .burger{display:none; flex-direction:column; gap:4px; background:none; border:none; cursor:pointer; padding:8px;}
+  .burger span{width:20px; height:1px; background:var(--bone); display:block;}
+  .mobile-nav{display:none; flex-direction:column; border-top:1px solid var(--zinc);}
+  .mobile-nav.open{display:flex;}
+  .mobile-nav a{
+    padding:14px 0; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted);
+    text-decoration:none; border-bottom:1px solid var(--zinc);
+  }
+  .mobile-nav a.active{color:var(--champagne);}
+
+  @media (max-width:860px){
+    nav.center, .status{display:none;}
+    .burger{display:flex;}
+  }
+
+  main{padding-top:84px;}
+
+  section.block{padding-top:72px; padding-bottom:72px;}
+  section.block + section.block{border-top:1px solid var(--zinc);}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative; overflow:hidden; padding-top:140px; padding-bottom:88px; border-bottom:1px solid var(--zinc);}
+  .hero-grid{
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(var(--zinc) 1px, transparent 1px),
+      linear-gradient(90deg, var(--zinc) 1px, transparent 1px);
+    background-size:64px 64px;
+    opacity:0.22;
+    mask-image:radial-gradient(ellipse at 30% 20%, black 0%, transparent 72%);
+    -webkit-mask-image:radial-gradient(ellipse at 30% 20%, black 0%, transparent 72%);
+  }
+  .hero-inner{position:relative; max-width:760px;}
+  .hero h1{font-size:clamp(34px,5.2vw,58px); line-height:1.08; color:var(--bone); margin-top:18px;}
+  .hero .thesis{margin-top:22px; color:var(--muted); font-size:16px; max-width:56ch; line-height:1.7;}
+  .hero .actions{display:flex; gap:14px; margin-top:36px; flex-wrap:wrap;}
+
+  /* ---------- practice sections ---------- */
+  .practice-sub{margin-top:14px; color:var(--muted); font-size:15px; max-width:70ch;}
+  .meta-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:1px; background:var(--zinc); margin-top:36px; border:1px solid var(--zinc);}
+  .meta-cell{background:var(--ink); padding:20px 22px; min-width:0;}
+  .meta-cell .label{margin-bottom:10px; display:block;}
+  .meta-cell .val{font-size:14px; color:var(--bone); line-height:1.7;}
+  .meta-cell .price{color:var(--champagne); font-family:var(--font-mono); font-size:13px;}
+  .meta-cell ul{margin:0; padding:0; list-style:none;}
+  .meta-cell li{margin-bottom:6px;}
+  .meta-cell li:last-child{margin-bottom:0;}
+
+  /* ---------- airfield ---------- */
+  .metar-bar{
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+    font-family:var(--font-mono); font-size:12px; color:var(--bone);
+    background:var(--deepdark); border:1px solid var(--zinc); padding:12px 16px; margin-top:24px;
+  }
+  .node-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(190px,1fr)); gap:1px; background:var(--zinc); margin-top:28px; border:1px solid var(--zinc);}
+  .node-card{
+    background:var(--slate); padding:18px 18px 20px; text-align:left; border:none; color:var(--bone);
+    cursor:pointer; min-width:0; transition:background-color .15s ease; font-family:inherit;
+  }
+  .node-card:hover{background:#171a20;}
+  .node-card.selected{background:var(--ink); box-shadow:inset 3px 0 0 var(--champagne);}
+  .node-card .num{font-family:var(--font-mono); font-size:11px; color:var(--champagne);}
+  .node-card .name{font-family:var(--font-sans); font-size:13px; letter-spacing:0.03em; margin-top:8px; font-weight:700;}
+  .node-card .sub{font-size:12px; color:var(--muted); margin-top:6px; line-height:1.5;}
+
+  .inspector{margin-top:1px; background:var(--deepdark); border:1px solid var(--zinc); border-top:none; padding:28px;}
+  .inspector-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:22px; margin-top:16px;}
+  .inspector .field .label{margin-bottom:8px; display:block;}
+  .inspector .field .val{font-family:var(--font-mono); font-size:13px; color:var(--bone); line-height:1.6;}
+  .inspector .cta-row{display:flex; gap:12px; margin-top:26px; flex-wrap:wrap; border-top:1px solid var(--zinc); padding-top:24px;}
+
+  /* ---------- remote services ---------- */
+  .svc-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(230px,1fr)); gap:1px; background:var(--zinc); margin-top:30px; border:1px solid var(--zinc);}
+  .svc-card{background:var(--slate); padding:24px; min-width:0;}
+  .svc-card h3{font-size:19px; margin-bottom:10px;}
+  .svc-card .price{font-family:var(--font-mono); color:var(--champagne); font-size:13px; display:block; margin-bottom:12px;}
+  .svc-card p{color:var(--muted); font-size:13.5px; line-height:1.6;}
+
+  /* ---------- commission ---------- */
+  .commission-layout{display:grid; grid-template-columns:1.6fr 1fr; gap:1px; background:var(--zinc); margin-top:30px; border:1px solid var(--zinc);}
+  @media (max-width:760px){.commission-layout{grid-template-columns:1fr;}}
+  .commission-main{background:var(--ink); padding:32px; min-width:0;}
+  .commission-side{background:var(--slate); padding:28px; min-width:0;}
+
+  .stepper{display:flex; align-items:center; gap:8px; margin-bottom:28px; flex-wrap:wrap;}
+  .step-dot{
+    width:26px; height:26px; border-radius:50%; border:1px solid var(--zinc); display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-mono); font-size:11px; color:var(--muted); flex:none;
+  }
+  .step-dot.done{border-color:var(--champagne); color:var(--champagne);}
+  .step-dot.current{background:var(--champagne); color:var(--ink); border-color:var(--champagne);}
+  .step-line{flex:1; height:1px; background:var(--zinc); min-width:14px;}
+
+  .step-panel{display:none;}
+  .step-panel.active{display:block;}
+
+  .opt-list{display:flex; flex-direction:column; gap:1px; background:var(--zinc); border:1px solid var(--zinc); margin-top:18px;}
+  .opt{
+    background:var(--slate); display:flex; align-items:center; justify-content:space-between; gap:14px;
+    padding:14px 16px; cursor:pointer; min-width:0;
+  }
+  .opt:hover{background:#171a20;}
+  .opt.selected{background:var(--champagne-10); box-shadow:inset 3px 0 0 var(--champagne);}
+  .opt .opt-name{font-size:13.5px; display:flex; align-items:center;}
+  .opt .opt-price{font-family:var(--font-mono); font-size:12px; color:var(--champagne); white-space:nowrap;}
+  .opt input{accent-color:var(--champagne); flex:none; margin-right:10px;}
+
+  .field-row{display:flex; flex-direction:column; gap:6px; margin-bottom:18px;}
+  .field-row label{font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted);}
+  .field-row input, .field-row textarea{
+    background:var(--deepdark); border:1px solid var(--zinc); color:var(--bone); font-family:var(--font-sans);
+    font-size:14px; padding:12px 14px; border-radius:1px; width:100%;
+  }
+  .field-row input:focus, .field-row textarea:focus{outline:1px solid var(--champagne); border-color:var(--champagne);}
+  .field-row textarea{resize:vertical; min-height:88px;}
+
+  .wizard-nav{display:flex; justify-content:space-between; margin-top:28px; gap:12px;}
+
+  .summary-row{display:flex; justify-content:space-between; gap:10px; padding:10px 0; border-bottom:1px solid var(--zinc); font-size:12.5px;}
+  .summary-row:last-child{border-bottom:none;}
+  .summary-row .k{color:var(--muted);}
+  .summary-row .v{color:var(--bone); text-align:right;}
+
+  .confirm-box{display:none; text-align:center; padding:36px 10px;}
+  .confirm-box.active{display:block;}
+  .confirm-box .mark{font-family:var(--font-mono); color:var(--champagne); font-size:12px; letter-spacing:0.12em;}
+  .confirm-box p{margin-top:16px; color:var(--bone); font-size:15px; max-width:48ch; margin-left:auto; margin-right:auto; line-height:1.7;}
+
+  /* ---------- founder / proof ---------- */
+  .founder{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start;}
+  @media (max-width:760px){.founder{grid-template-columns:1fr;}}
+  .proof-list{display:flex; flex-direction:column; gap:1px; background:var(--zinc); border:1px solid var(--zinc);}
+  .proof-item{background:var(--slate); padding:16px 18px; font-family:var(--font-mono); font-size:12.5px; color:var(--bone); display:flex; gap:12px;}
+  .proof-item .mk{color:var(--champagne); flex:none;}
+
+  /* ---------- footer ---------- */
+  footer{border-top:1px solid var(--zinc); padding:56px 0 calc(56px + env(safe-area-inset-bottom,0px));}
+  .footer-top{display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap; align-items:flex-start;}
+  .footer-sig{font-family:var(--font-display); font-size:17px; letter-spacing:0.04em;}
+  .footer-hubs{font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:8px;}
+  .caption-card{margin-top:40px; background:var(--slate); border:1px solid var(--zinc); padding:26px; max-width:520px;}
+  .caption-card .l1{color:var(--bone); font-family:var(--font-display); font-style:italic; font-size:19px;}
+  .caption-card .l2{font-size:13px; color:var(--muted); margin-top:8px;}
+  .caption-card .l3{font-size:13px; color:var(--champagne); margin-top:14px; letter-spacing:0.04em;}
+  .caption-card .l4{font-size:12px; color:var(--muted); margin-top:6px; font-family:var(--font-mono);}
+  .copyright{margin-top:44px; font-size:11px; color:var(--muted); font-family:var(--font-mono);}
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+    html{scroll-behavior:auto;}
+  }
+</style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://www.ouelletstudio.com/#organization","name":"Ouellet Studio","founder":{"@type":"Person","name":"Danick Ouellet"},"priceRange":"$1,250 - $18,000 CAD","areaServed":["Vancouver (YVR/YPK)","Montreal (CYUL/CYHU)","Toronto (CYYZ/CYTZ)","Calgary (CYYC/CYBW)","London (EGLF/EGKB)","Dubai (OMDW/OMAD)","Monaco (Port Hercule)"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Remote Digital Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Remote Pre-Purchase Visual Audit"},"price":"3500","priceCurrency":"CAD"},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Interactive 3D Digital Twin Master Portfolio"},"priceSpecification":{"@type":"PriceSpecification","minPrice":"8500","maxPrice":"18000","priceCurrency":"CAD"}}]}}]}
+</script>
+<script type="application/geo+json">
+{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"icao":"CYUL","name":"Montréal-Trudeau International"},"geometry":{"type":"Point","coordinates":[-73.7408,45.4706]}},{"type":"Feature","properties":{"icao":"CYPK","name":"Pitt Meadows Airport"},"geometry":{"type":"Point","coordinates":[-122.7095,49.2161]}},{"type":"Feature","properties":{"icao":"CYYZ","name":"Toronto Pearson International"},"geometry":{"type":"Point","coordinates":[-79.6306,43.6777]}}]}
+</script>
+<!-- Image alt-text formula for future photography assets: "[Subject] at [location], [light/time]. [Two or three materials]. Light · Material · Motion." -->
 </head>
+<body>
 
-<body class="bg-void text-alabaster selection:bg-gold selection:text-void font-sans">
-  <div class="sr-only" aria-hidden="false">
-    <p>Ouellet Studio is a specialized commercial visual practice founded by Danick Ouellet. It delivers cinematic visual monographs, 5500K CAT16 scene-referred darktable calibrated photography, and remote digital asset-tech for executive aviation, superyachts, and luxury architectural forms.</p>
+<header>
+  <div class="container gutter row">
+    <a href="#hero" class="brand">
+      <span class="word">OUELLET STUDIO</span>
+      <span class="tag">Light · Material · Motion.</span>
+    </a>
+
+    <nav class="center">
+      <a href="#yachting" data-nav-link="yachting">Yachting</a>
+      <a href="#aviation" data-nav-link="aviation">Aviation</a>
+      <a href="#architecture" data-nav-link="architecture">Architecture</a>
+      <a href="#hospitality" data-nav-link="hospitality">Hospitality</a>
+      <a href="#automotive" data-nav-link="automotive">Automotive</a>
+      <a href="#concepts" data-nav-link="concepts">Concepts</a>
+      <a href="#ypk-ecosystem" data-nav-link="ypk-ecosystem">YPK Ecosystem</a>
+      <a href="#remote-services" data-nav-link="remote-services">Remote Services</a>
+      <a href="#commission" data-nav-link="commission">Commission</a>
+    </nav>
+
+    <div class="status">
+      <span class="hubs">MONTREAL (CYUL/CYHU) · TORONTO (CYYZ/CYTZ) · VANCOUVER (YVR/YPK)</span>
+      <span class="pill"><span class="dot"></span>CYUL 270900Z 24008KT 15SM FEW040 BKN100 · CAT16 DAYLIGHT 5500K · SYSTEM: ACTIVE</span>
+    </div>
+
+    <button class="burger" aria-label="Menu" id="burger-btn">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav gutter" id="mobile-nav">
+    <a href="#yachting" data-nav-link="yachting">Yachting</a>
+    <a href="#aviation" data-nav-link="aviation">Aviation</a>
+    <a href="#architecture" data-nav-link="architecture">Architecture</a>
+    <a href="#hospitality" data-nav-link="hospitality">Hospitality</a>
+    <a href="#automotive" data-nav-link="automotive">Automotive</a>
+    <a href="#concepts" data-nav-link="concepts">Concepts</a>
+    <a href="#ypk-ecosystem" data-nav-link="ypk-ecosystem">YPK Ecosystem</a>
+    <a href="#remote-services" data-nav-link="remote-services">Remote Services</a>
+    <a href="#commission" data-nav-link="commission">Commission</a>
+  </nav>
+</header>
+
+<main>
+
+  <div class="sr-only" aria-hidden="true">
+    Ouellet Studio is a cinematic visual studio founded by Danick Ouellet, specializing in yachting, executive aviation, architecture, hospitality, and automotive photography and videography. Ouellet Studio color-calibrates every deliverable to a 5500K CAT16 daylight target in darktable before any creative grade is applied. Ouellet Studio treats aircraft registration marks, vessel names, and other identifying marks as private by default and publishes them only with the owner's or operator's written approval on file. Ouellet Studio's governing creative principle is Light · Material · Motion: light reveals form, material gives character, motion gives it life. Ouellet Studio serves clients in Vancouver, Calgary, Montreal, Toronto, London, Dubai, and Monaco, with remote digital services — including pre-purchase visual condition audits and interactive 3D digital twin walkthroughs — available globally.
   </div>
 
-  <div id="root"></div>
+  <section id="hero" class="hero gutter">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="eyebrow">Ouellet Studio // Cinematic Visual Monographs</div>
+      <h1>Cinematic visual monographs for superyachts, executive aviation, and architectural forms.</h1>
+      <p class="thesis">Light reveals form. Material gives character. Motion brings life. Quiet observation for shipyards, flight ops, and principal architects.</p>
+      <div class="label" style="margin-top:22px;">Vancouver · Calgary · Montreal · Toronto · Global Deployments by Arrangement</div>
+      <div class="actions">
+        <a href="#yachting" class="btn btn-solid">View Monograph Portfolio</a>
+        <a href="#commission" class="btn">Inquire for Commission</a>
+      </div>
+    </div>
+  </section>
 
-  <script type="text/babel">
-    const { useState, useEffect } = React;
+  <section id="yachting" class="block gutter" itemscope itemtype="https://schema.org/Service" itemprop="makesOffer" data-vertical="yachting" data-hub="Old Port MTL, Port Credit, Coal Harbour, Muskoka, Monaco, Palma de Mallorca">
+    <div class="container">
+      <div class="eyebrow">Practice 01 // Yachting</div>
+      <h2 style="margin-top:14px;">Yachting &amp; Marine Monograph Suite</h2>
+      <p class="practice-sub">Superyachts, day-cruisers, teak joinery, helm detail, and running hull motion.</p>
+      <div class="meta-grid">
+        <div class="meta-cell">
+          <span class="label">Investment</span>
+          <div class="val"><ul>
+            <li><span class="price">$2,250 – $8,500 CAD</span> — Single session</li>
+            <li><span class="price">$15,000 – $30,000 CAD</span> — Med / Caribbean charter destination series</li>
+          </ul></div>
+        </div>
+        <div class="meta-cell">
+          <span class="label">Operational hubs</span>
+          <div class="val"><ul>
+            <li>Old Port MTL</li><li>Port Credit (GTA)</li><li>Coal Harbour (YVR)</li>
+            <li>Muskoka</li><li>Monaco</li><li>Palma de Mallorca</li>
+          </ul></div>
+        </div>
+        <div class="meta-cell">
+          <span class="label">Deliverables</span>
+          <div class="val"><ul>
+            <li>300DPI print TIFFs</li><li>4:5 vertical stills</li>
+            <li>9:16 running hull reels</li><li>Signed asset clearance certificate</li>
+          </ul></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    const HUBS_DATA = {
-      aviation: [
-        { label: "YVR — Vancouver International", value: "YVR" },
-        { label: "YPK — Pitt Meadows Regional", value: "YPK" },
-        { label: "CYYC — Calgary International", value: "CYYC" },
-        { label: "CYBW — Springbank / Banff Gateway", value: "CYBW" },
-        { label: "CYUL — Montréal-Trudeau FBO Row", value: "CYUL" },
-        { label: "CYHU — Saint-Hubert Executive Airport", value: "CYHU" },
-        { label: "CYYZ — Toronto Pearson Midfield", value: "CYYZ" },
-        { label: "CYTZ — Billy Bishop Waterfront", value: "CYTZ" },
-        { label: "EGLF — London Farnborough Airport", value: "EGLF" },
-        { label: "EGKB — London Biggin Hill Hub", value: "EGKB" },
-        { label: "OMDW — Dubai South VVIP Terminal", value: "OMDW" },
-        { label: "Private Hangar / Other Location", value: "OTHER" }
-      ],
-      marine: [
-        { label: "Coal Harbour & RVYC (Vancouver)", value: "VAN_MARINE" },
-        { label: "Lake Okanagan & Kelowna Docks", value: "OKANAGAN" },
-        { label: "Old Port of Montreal (Port d'Escale)", value: "MTL_PORT" },
-        { label: "Lake Ontario / Port Credit (GTA)", value: "GTA_MARINE" },
-        { label: "Muskoka Lakes & Georgian Bay", value: "MUSKOKA_MARINE" },
-        { label: "Port Hercule (Monaco / French Riviera)", value: "MONACO" },
-        { label: "Palma de Mallorca (Balearic Islands)", value: "PALMA" },
-        { label: "Dubai Harbour & Mina Rashid", value: "DUBAI_MARINE" },
-        { label: "Private Slip / Other Facility", value: "OTHER" }
-      ],
-      architecture: [
-        { label: "Greater Montreal & Laurentians Compounds", value: "MTL_ARCH" },
-        { label: "Greater Toronto Area & Muskoka Estates", value: "GTA_ARCH" },
-        { label: "Metro Vancouver & Sea-to-Sky Compounds", value: "VAN_ARCH" },
-        { label: "Canmore & Banff Alpine Compounds", value: "ALBERTA_ARCH" },
-        { label: "Cotswolds & Country Estates (UK)", value: "UK_ARCH" },
-        { label: "Global Deployment Site", value: "GLOBAL_ARCH" }
-      ],
-      automotive: [
-        { label: "Vancouver Showroom / Collector Vault", value: "VAN_AUTO" },
-        { label: "Calgary Exotic Facility", value: "YYC_AUTO" },
-        { label: "Montreal Collector Vault", value: "MTL_AUTO" },
-        { label: "GTA / Woodbridge Hypercar Vault", value: "GTA_AUTO" },
-        { label: "Private Collector Facility", value: "OTHER" }
-      ]
-    };
+  <section id="aviation" class="block gutter" itemscope itemtype="https://schema.org/Service" itemprop="makesOffer" data-vertical="aviation" data-hub="CYUL, CYHU, CYYZ, CYTZ, YVR/YPK, EGLF, OMDW">
+    <div class="container">
+      <div class="eyebrow">Practice 02 // Aviation</div>
+      <h2 style="margin-top:14px;">Executive Aviation &amp; Apron Monograph Suite</h2>
+      <p class="practice-sub">Heavy jets, turboprops, glass cockpits, hangar event light, and 4K gimbal passes.</p>
+      <div class="meta-grid">
+        <div class="meta-cell">
+          <span class="label">Investment</span>
+          <div class="val"><ul>
+            <li><span class="price">$2,500 – $9,500 CAD</span> — Heavy jet monograph</li>
+            <li><span class="price">$2,500 CAD</span> — 4K gimbal motion pass</li>
+          </ul></div>
+        </div>
+        <div class="meta-cell">
+          <span class="label">Operational hubs</span>
+          <div class="val"><ul>
+            <li>CYUL — Montréal-Trudeau</li><li>CYHU — Saint-Hubert</li>
+            <li>CYYZ — Pearson</li><li>CYTZ — Billy Bishop</li><li>YVR / YPK — Vancouver</li>
+            <li>EGLF — Farnborough</li><li>OMDW — Dubai</li>
+          </ul></div>
+        </div>
+        <div class="meta-cell">
+          <span class="label">Deliverables</span>
+          <div class="val"><ul>
+            <li>Cabin atmosphere stills</li><li>Avionics detail</li>
+            <li>Ramp taxiing loops</li><li>Tail number privacy blinding certificate</li>
+          </ul></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    const SCOPES_DATA = [
-      { id: "showcase", title: "Showcase Pass ($1,250 CAD / $950 USD)", desc: "Single light aircraft, day-yacht, or supercar spec. 15 master stills." },
-      { id: "campaign", title: "Commercial Campaign ($2,250 CAD / $1,650 USD)", desc: "Full-day production, 25-30 edited stills + 4K atmospheric motion b-roll." },
-      { id: "audit", title: "Remote Pre-Purchase Visual Audit ($3,500 CAD)", desc: "Objective high-resolution remote condition assessment and material audit." },
-      { id: "heavy", title: "Heavy Asset & Facility Monograph ($5,500 – $9,500 CAD)", desc: "Heavy jets (Globals/Gulfstreams), 60ft+ yachts, multi-bay FBO hangars." },
-      { id: "retainer", title: "Annual Fleet Retainer / Digital Twin ($1,500/mo – $18,000 CAD)", desc: "Quarterly fleet updates, 3D digital twin, priority F1/summer ramp slots." }
-    ];
+  <section id="architecture" class="block gutter" itemscope itemtype="https://schema.org/Service" itemprop="makesOffer" data-vertical="architecture" data-hub="Greater Montreal, Greater Toronto, Metro Vancouver, Calgary/Rockies, Laurentians, Muskoka, Cotswolds UK">
+    <div class="container">
+      <div class="eyebrow">Practice 03 // Architecture</div>
+      <h2 style="margin-top:14px;">Spatial &amp; Architectural Monograph Suite</h2>
+      <p class="practice-sub">Modern compounds, hangar headquarters, private terminals, and timber / concrete light.</p>
+      <div class="meta-grid">
+        <div class="meta-cell">
+          <span class="label">Investment</span>
+          <div class="val"><ul><li><span class="price">$2,500 – $8,500 CAD</span> — Per commission</li></ul></div>
+        </div>
+        <div class="meta-cell">
+          <span class="label">Operational hubs</span>
+          <div class="val"><ul>
+            <li>Greater Montreal</li><li>Greater Toronto</li><li>Metro Vancouver</li>
+            <li>Calgary / Rockies</li><li>Laurentians</li><li>Muskoka</li>
+            <li>Cotswolds, UK</li><li>Global</li>
+          </ul></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    function App() {
-      const [metarIndex, setMetarIndex] = useState(0);
-      const metarStrings = [
-        "CYUL 270900Z 24008KT 15SM FEW040 BKN100 12/04 A3002 · RAMP CAT1 CLEAR",
-        "CYHU 270915Z 23006KT 15SM SCT050 BKN120 11/03 A3003 · MET TERMINAL READY",
-        "CYYZ 270920Z 27011KT 20SM FEW070 14/05 A2998 · INFIELD APRON OPEN",
-        "YPK 270910Z 18005KT 10SM BKN030 09/06 A3012 · SKY HELI / AIRBORNE RAMP OK",
-        "EGLF 270925Z 21009KT 9999 FEW025 15/10 Q1018 · FARNBOROUGH RAMP READY",
-        "OMDW 270900Z 04012KT CAVOK 32/18 Q1014 · VVIP APRON CAT1 CLEAR"
-      ];
+  <section id="hospitality" class="block gutter" itemscope itemtype="https://schema.org/Service" itemprop="makesOffer" data-vertical="hospitality" data-hub="Greater Montreal, Greater Toronto, Metro Vancouver, Calgary/Rockies, Laurentians, Muskoka, Cotswolds UK">
+    <div class="container">
+      <div class="eyebrow">Practice 04 // Hospitality</div>
+      <h2 style="margin-top:14px;">Boutique Hospitality &amp; Destination Monograph Suite</h2>
+      <p class="practice-sub">Boutique private terminals, estate garages, alpine lodges, and ambiance light.</p>
+      <div class="meta-grid">
+        <div class="meta-cell">
+          <span class="label">Investment</span>
+          <div class="val"><ul><li><span class="price">$3,500 – $8,500 CAD</span> — Per commission</li></ul></div>
+        </div>
+        <div class="meta-cell">
+          <span class="label">Operational hubs</span>
+          <div class="val"><ul>
+            <li>Greater Montreal</li><li>Greater Toronto</li><li>Metro Vancouver</li>
+            <li>Calgary / Rockies</li><li>Laurentians</li><li>Muskoka</li>
+            <li>Cotswolds, UK</li><li>Global</li>
+          </ul></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      useEffect(() => {
-        const interval = setInterval(() => {
-          setMetarIndex((prev) => (prev + 1) % metarStrings.length);
-        }, 5000);
-        return () => clearInterval(interval);
-      }, []);
+  <section id="automotive" class="block gutter" itemscope itemtype="https://schema.org/Service" itemprop="makesOffer" data-vertical="automotive" data-hub="Greater Montreal, Greater Toronto, Metro Vancouver, Calgary/Rockies, Laurentians, Muskoka, Cotswolds UK">
+    <div class="container">
+      <div class="eyebrow">Practice 05 // Automotive</div>
+      <h2 style="margin-top:14px;">Automotive &amp; Coachbuilding Monograph Suite</h2>
+      <p class="practice-sub">Exotic collections, studio curves, carbon weave detail, and tarmac motion.</p>
+      <div class="meta-grid">
+        <div class="meta-cell">
+          <span class="label">Investment</span>
+          <div class="val"><ul><li><span class="price">$1,250 – $3,500 CAD</span> — Per commission</li></ul></div>
+        </div>
+        <div class="meta-cell">
+          <span class="label">Operational hubs</span>
+          <div class="val"><ul>
+            <li>Greater Montreal</li><li>Greater Toronto</li><li>Metro Vancouver</li>
+            <li>Calgary / Rockies</li><li>Laurentians</li><li>Muskoka</li>
+            <li>Cotswolds, UK</li><li>Global</li>
+          </ul></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      const [vertical, setVertical] = useState("aviation");
-      const [selectedHub, setSelectedHub] = useState("CYUL");
-      const [scope, setScope] = useState("campaign");
-      const [privacy, setPrivacy] = useState("blind");
-      const [licenseBuyout, setLicenseBuyout] = useState("standard");
-      const [clientName, setClientName] = useState("");
-      const [clientEmail, setClientEmail] = useState("");
-      const [clientNotes, setClientNotes] = useState("");
-      const [glarePosition, setGlarePosition] = useState(50);
+  <section id="concepts" class="block gutter" itemscope itemtype="https://schema.org/Service" itemprop="makesOffer" data-vertical="concepts" data-hub="Global remote / digital delivery, MTL FBO row, TOR FBO row, YVR FBO row">
+    <div class="container">
+      <div class="eyebrow">Practice 06 // Speculative Concepts</div>
+      <h2 style="margin-top:14px;">Speculative Concepts &amp; Neural Pre-Vis</h2>
+      <p class="practice-sub">Pre-construction architectural modeling, aircraft livery specs, and cabin refit pre-vis.</p>
+      <div class="meta-grid">
+        <div class="meta-cell">
+          <span class="label">Investment</span>
+          <div class="val"><ul><li><span class="price">$2,500 – $7,500 CAD</span> — Per commission</li></ul></div>
+        </div>
+        <div class="meta-cell">
+          <span class="label">Operational hubs</span>
+          <div class="val"><ul>
+            <li>Global remote / digital delivery</li><li>MTL FBO row</li>
+            <li>TOR FBO row</li><li>YVR FBO row</li>
+          </ul></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      const handleVerticalChange = (v) => {
-        setVertical(v);
-        setSelectedHub(HUBS_DATA[v][0].value);
-      };
+  <section id="ypk-ecosystem" class="block gutter">
+    <div class="container">
+      <div class="eyebrow">CYPK // Pitt Meadows Airfield Vector Schematic</div>
+      <h2 style="margin-top:14px;">The YPK Ecosystem</h2>
+      <p class="practice-sub">Five tenant operations mapped as one working airfield. Select a node to read its asset spec, lighting calibration, and privacy status.</p>
 
-      return (
-        <div className="min-h-screen flex flex-col font-sans border-t-2 border-gold">
-          <div className="bg-darkbox border-b border-bordercolor px-4 py-2.5 text-xs font-mono tracking-wider flex flex-wrap items-center justify-between gap-4 text-mutedgray">
-            <div className="flex items-center space-x-3">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-gold"></span>
-              </span>
-              <span className="text-alabaster font-medium uppercase tracking-widest">LIVE RAMP STATUS:</span>
-              <span className="text-gold transition-all duration-500">{metarStrings[metarIndex]}</span>
+      <div class="metar-bar">
+        <span class="dot"></span>
+        CYPK 261400Z 28012KT 15SM FEW030 BKN080 +14°C
+        <span class="label" style="margin-left:auto;">Reference reading, not a live feed</span>
+      </div>
+
+      <div class="node-grid" id="node-grid">
+        <button class="node-card selected" data-node="society">
+          <div class="num">NODE 01</div>
+          <div class="name">YPK Airport Society</div>
+          <div class="sub">Main terminal &amp; admin / spatial architecture</div>
+        </button>
+        <button class="node-card" data-node="sky">
+          <div class="num">NODE 02</div>
+          <div class="name">Sky Helicopters</div>
+          <div class="sub">Bell 429 / H125 fleet — reg. C-GXNP / hangar light</div>
+        </button>
+        <button class="node-card" data-node="integrity">
+          <div class="num">NODE 03</div>
+          <div class="name">Integrity Flight Support</div>
+          <div class="sub">VIP FBO lounge &amp; apron row</div>
+        </button>
+        <button class="node-card" data-node="airborne">
+          <div class="num">NODE 04</div>
+          <div class="name">Airborne Management</div>
+          <div class="sub">Cirrus fleet — reg. C-OWVA / glass cockpit avionics</div>
+        </button>
+        <button class="node-card" data-node="heliproducts">
+          <div class="num">NODE 05</div>
+          <div class="name">Heliproducts Overhaul</div>
+          <div class="sub">15,000 sq ft MRO hangar / turbine joinery</div>
+        </button>
+      </div>
+
+      <div class="inspector">
+        <div class="eyebrow" id="insp-eyebrow">Active Node // YPK Airport Society</div>
+        <div class="inspector-grid">
+          <div class="field">
+            <span class="label">Asset spec</span>
+            <div class="val" id="insp-spec">Main terminal &amp; admin / spatial architecture</div>
+          </div>
+          <div class="field">
+            <span class="label">Lighting calibration</span>
+            <div class="val">5500K CAT16 + X-Rite target</div>
+          </div>
+          <div class="field">
+            <span class="label">Exposure</span>
+            <div class="val">-1.0 EV highlight protection</div>
+          </div>
+          <div class="field">
+            <span class="label">Privacy status</span>
+            <div class="val" id="insp-privacy">Public frontage — standard clearance</div>
+          </div>
+        </div>
+        <div class="cta-row">
+          <a href="#commission" class="btn btn-solid">Pre-Book Holiday 4K Gimbal Video Pass (Dec 15–28) — $2,500 CAD</a>
+          <a href="#commission" class="btn">Order Fine-Art Lounge Metallic Acrylic Display — $1,850 CAD</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="remote-services" class="block gutter" itemscope itemtype="https://schema.org/Service" itemprop="makesOffer" data-vertical="remote-services" data-hub="Global remote / digital delivery">
+    <div class="container">
+      <div class="eyebrow">Enterprise Digital Capabilities // 100% Remote Deployment</div>
+      <h2 style="margin-top:14px;">Remote Services</h2>
+      <p class="practice-sub">Execution that never requires a flight line, a marina gate, or a site visit.</p>
+      <div class="svc-grid">
+        <div class="svc-card">
+          <h3>Remote Pre-Purchase Visual Audit</h3>
+          <span class="price mono">$3,500 CAD</span>
+          <p>A 20-page technical condition report for pre-owned jet or yacht buyers ahead of escrow release, including darktable panel-alignment and leather-wear analysis.</p>
+        </div>
+        <div class="svc-card">
+          <h3>Fleet Color Standardization &amp; LUT Pack</h3>
+          <span class="price mono">$2,500 – $4,500 CAD</span>
+          <p>Studio LUT development and Display P3 color re-grading across 5–20 fleet assets, built for Avinode, Controller, and YachtWorld listing consistency.</p>
+        </div>
+        <div class="svc-card">
+          <h3>Neural Livery &amp; Surface Spec Study</h3>
+          <span class="price mono">$3,500 – $7,500 CAD</span>
+          <p>Photorealistic parametric exterior paint and cabin refit renders under true 5500K golden-hour ramp lighting, ahead of physical execution.</p>
+        </div>
+        <div class="svc-card">
+          <h3>Interactive 3D Digital Twin Master Portfolio</h3>
+          <span class="price mono">$8,500 – $18,000 CAD</span>
+          <p>Web-interactive 3D spatial walkthroughs with real-time 5500K daylight and cabin night-lighting toggles, for $50M+ superyachts and heavy jets listed in Monaco, Dubai, and London.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="commission" class="block gutter">
+    <div class="container">
+      <div class="eyebrow">Commission Request Portal // Pre-Qualifying Brief</div>
+      <h2 style="margin-top:14px;">Start a Commission</h2>
+      <p class="practice-sub">Five short steps. Our Creative Director reviews fleet schedule availability and replies within two business hours.</p>
+
+      <div class="commission-layout">
+        <div class="commission-main">
+
+          <div id="wizard-wrap">
+            <div class="stepper" id="stepper">
+              <div class="step-dot current" data-dot="1">1</div><div class="step-line"></div>
+              <div class="step-dot" data-dot="2">2</div><div class="step-line"></div>
+              <div class="step-dot" data-dot="3">3</div><div class="step-line"></div>
+              <div class="step-dot" data-dot="4">4</div><div class="step-line"></div>
+              <div class="step-dot" data-dot="5">5</div>
             </div>
-            <div className="hidden lg:flex items-center space-x-4 text-[10px] uppercase tracking-widest text-mutedgray">
-              <span>YVR / YPK</span>
-              <span>·</span>
-              <span>CYYC / CYBW</span>
-              <span>·</span>
-              <span className="text-alabaster font-semibold">CYUL / CYHU</span>
-              <span>·</span>
-              <span>CYYZ / CYTZ</span>
-              <span>·</span>
-              <span>EGLF</span>
-              <span>·</span>
-              <span>OMDW</span>
+
+            <div class="step-panel active" data-step="1">
+              <h3>Practice sector</h3>
+              <div class="opt-list" data-group="sector">
+                <label class="opt"><span class="opt-name"><input type="radio" name="sector" value="marine" data-sector-label="Yachting &amp; Marine (Main Focus)">Yachting &amp; Marine (Main Focus)</span></label>
+                <label class="opt"><span class="opt-name"><input type="radio" name="sector" value="aviation" data-sector-label="Executive Aviation">Executive Aviation</span></label>
+                <label class="opt"><span class="opt-name"><input type="radio" name="sector" value="architecture" data-sector-label="Architecture &amp; Spatial">Architecture &amp; Spatial</span></label>
+                <label class="opt"><span class="opt-name"><input type="radio" name="sector" value="hospitality" data-sector-label="Boutique Hospitality">Boutique Hospitality</span></label>
+                <label class="opt"><span class="opt-name"><input type="radio" name="sector" value="automotive" data-sector-label="Automotive &amp; Coachbuilding">Automotive &amp; Coachbuilding</span></label>
+                <label class="opt"><span class="opt-name"><input type="radio" name="sector" value="concepts" data-sector-label="Speculative Concepts &amp; Remote Digital Services">Speculative Concepts &amp; Remote Digital Services</span></label>
+              </div>
+            </div>
+
+            <div class="step-panel" data-step="2">
+              <h3>Operating base / hub</h3>
+              <p class="prose" style="margin-top:10px;">Pick a sector in step one first — the hub list below matches it.</p>
+              <div class="opt-list" data-group="hub" id="hub-options"></div>
+            </div>
+
+            <div class="step-panel" data-step="3">
+              <h3>Scope &amp; production tier</h3>
+              <div class="opt-list" data-group="tier">
+                <label class="opt"><span class="opt-name"><input type="radio" name="tier" value="showcase" data-tier-label="Showcase Pass">Showcase Pass</span><span class="opt-price">$1,250 CAD</span></label>
+                <label class="opt"><span class="opt-name"><input type="radio" name="tier" value="campaign" data-tier-label="Commercial Campaign Monograph">Commercial Campaign Monograph</span><span class="opt-price">$2,250 CAD</span></label>
+                <label class="opt"><span class="opt-name"><input type="radio" name="tier" value="audit" data-tier-label="Remote Visual Audit &amp; Spec Study">Remote Visual Audit &amp; Spec Study</span><span class="opt-price">$3,500 CAD</span></label>
+                <label class="opt"><span class="opt-name"><input type="radio" name="tier" value="heavy" data-tier-label="Heavy Asset / Facility Monograph">Heavy Asset / Facility Monograph</span><span class="opt-price">$5,500 – $9,500 CAD</span></label>
+                <label class="opt"><span class="opt-name"><input type="radio" name="tier" value="retainer" data-tier-label="Enterprise Fleet Retainer / Custom Digital Twin">Enterprise Fleet Retainer / Custom Digital Twin</span><span class="opt-price">$1,500/mo – $18,000 CAD</span></label>
+              </div>
+            </div>
+
+            <div class="step-panel" data-step="4">
+              <h3>Privacy &amp; identifier preference</h3>
+              <div class="opt-list" data-group="privacy">
+                <label class="opt"><span class="opt-name"><input type="radio" name="privacy" value="retain" data-privacy-label="Retain tail registration marks / vessel name">Retain tail registration marks / vessel name</span></label>
+                <label class="opt"><span class="opt-name"><input type="radio" name="privacy" value="blind" data-privacy-label="Retouch &amp; blind identifiers for privacy">Retouch &amp; blind identifiers for privacy</span></label>
+                <label class="opt"><span class="opt-name"><input type="radio" name="privacy" value="nda" data-privacy-label="Confidential NDA / non-publishing rights (+35% surcharge)">Confidential NDA / non-publishing rights (+35% surcharge)</span></label>
+              </div>
+            </div>
+
+            <div class="step-panel" data-step="5">
+              <h3 style="margin-bottom:20px;">Contact</h3>
+              <div class="field-row">
+                <label for="cf-name">Full name</label>
+                <input id="cf-name" required>
+              </div>
+              <div class="field-row">
+                <label for="cf-org">Firm / organization</label>
+                <input id="cf-org">
+              </div>
+              <div class="field-row">
+                <label for="cf-email">Email address</label>
+                <input id="cf-email" type="email" required>
+              </div>
+              <div class="field-row">
+                <label for="cf-phone">Direct phone</label>
+                <input id="cf-phone" type="tel">
+              </div>
+              <div class="field-row">
+                <label for="cf-notes">Project notes</label>
+                <textarea id="cf-notes"></textarea>
+              </div>
+            </div>
+
+            <div class="wizard-nav">
+              <button class="btn" id="btn-back" disabled style="opacity:0.35;">Back</button>
+              <button class="btn btn-solid" id="btn-next" disabled>Next</button>
             </div>
           </div>
 
-          <header className="sticky top-0 z-50 bg-void/95 backdrop-blur-md border-b border-bordercolor">
-            <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-              <a href="#" className="flex flex-col group">
-                <span className="font-serif text-2xl md:text-3xl tracking-[0.2em] text-alabaster group-hover:text-gold transition-colors">
-                  OUELLET STUDIO
-                </span>
-                <span className="font-mono text-[9px] tracking-[0.3em] uppercase text-gold/80 mt-0.5">
-                  Light · Material · Motion
-                </span>
-              </a>
+          <div class="confirm-box" id="confirm-box">
+            <div class="mark">BRIEF LOGGED</div>
+            <h3 style="margin-top:14px;">Commission Inquiry Logged.</h3>
+            <p>Our Creative Director will review fleet schedule availability and respond within 2 business hours.</p>
+          </div>
 
-              <nav className="hidden md:flex items-center space-x-8 text-xs font-mono uppercase tracking-[0.15em] text-mutedgray">
-                <a href="#aviation" className="hover:text-alabaster transition-colors">01 // Aviation</a>
-                <a href="#marine" className="hover:text-alabaster transition-colors">02 // Marine</a>
-                <a href="#architecture" className="hover:text-alabaster transition-colors">03 // Spatial</a>
-                <a href="#remote-services" className="hover:text-alabaster transition-colors">04 // Asset-Tech</a>
-                <a href="#inspector" className="hover:text-alabaster transition-colors">05 // Calibration</a>
-              </nav>
-
-              <a href="#commission" className="border border-gold/60 bg-gold/10 px-5 py-2.5 text-xs font-mono uppercase tracking-[0.2em] text-gold hover:bg-gold hover:text-void transition-all">
-                Commission
-              </a>
-            </div>
-          </header>
-
-          <main className="flex-1">
-            <section className="relative border-b border-bordercolor px-6 py-28 md:py-36 bg-gradient-to-b from-surface/40 to-void">
-              <div className="max-w-5xl mx-auto text-center">
-                <div className="inline-block border border-gold/30 bg-gold/5 px-4 py-1.5 mb-8 text-[10px] font-mono uppercase tracking-[0.3em] text-gold">
-                  Scene-Referred Visual Monographs · CAT16 Calibrated
-                </div>
-                <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-light text-alabaster tracking-tight leading-[1.08] mb-8">
-                  Light · Material · Motion
-                </h1>
-                <p className="max-w-2xl mx-auto font-sans text-base md:text-lg font-light text-mutedgray leading-relaxed mb-12">
-                  Cinematic visual monographs and remote digital asset-tech for superyachts, executive aviation fleets, and architectural forms. 
-                </p>
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-xs font-mono uppercase tracking-[0.2em]">
-                  <a href="#commission" className="w-full sm:w-auto border border-gold bg-gold px-8 py-4 text-void font-medium hover:bg-transparent hover:text-gold transition-all">
-                    Initiate Commission Request
-                  </a>
-                  <a href="#aviation" className="w-full sm:w-auto border border-bordercolor bg-surface px-8 py-4 text-alabaster hover:border-gold/50 transition-all">
-                    Explore Practice Sectors
-                  </a>
-                </div>
-
-                <div className="mt-20 pt-8 border-t border-bordercolor/60 grid grid-cols-2 md:grid-cols-4 gap-6 text-left">
-                  <div>
-                    <span className="block font-mono text-[10px] uppercase text-gold tracking-widest">Vancouver Hub</span>
-                    <span className="font-sans text-xs text-mutedgray mt-1 block">YVR / YPK · Coal Harbour</span>
-                  </div>
-                  <div>
-                    <span className="block font-mono text-[10px] uppercase text-gold tracking-widest">Montreal Hub</span>
-                    <span className="font-sans text-xs text-mutedgray mt-1 block">CYUL / CYHU · Vieux-Port</span>
-                  </div>
-                  <div>
-                    <span className="block font-mono text-[10px] uppercase text-gold tracking-widest">Toronto Hub</span>
-                    <span className="font-sans text-xs text-mutedgray mt-1 block">CYYZ / CYTZ · Muskoka</span>
-                  </div>
-                  <div>
-                    <span className="block font-mono text-[10px] uppercase text-gold tracking-widest">Global Corridors</span>
-                    <span className="font-sans text-xs text-mutedgray mt-1 block">EGLF · OMDW · Monaco · Palma</span>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <section id="aviation" className="border-b border-bordercolor px-6 py-24 bg-surface/30">
-              <div className="max-w-7xl mx-auto">
-                <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-bordercolor pb-6 mb-12">
-                  <div>
-                    <span className="font-mono text-xs text-gold uppercase tracking-[0.2em]">Practice Sector 01</span>
-                    <h2 className="font-serif text-3xl md:text-5xl text-alabaster mt-2">Executive Aviation Monographs</h2>
-                  </div>
-                  <span className="font-mono text-xs text-mutedgray uppercase tracking-widest mt-4 md:mt-0">
-                    CYUL · CYHU · CYYZ · CYTZ · YPK · EGLF · OMDW
-                  </span>
-                </div>
-
-                <div className="grid md:grid-cols-3 gap-8">
-                  <div className="bg-surface border border-bordercolor p-8 flex flex-col justify-between">
-                    <div>
-                      <span className="font-mono text-xs text-gold">01.1 // AMBIANCE</span>
-                      <h3 className="font-serif text-2xl text-alabaster mt-3 mb-4">Cabin Interior Atmosphere</h3>
-                      <p className="font-sans text-xs text-mutedgray leading-relaxed font-light">
-                        Precise highlight retention on hand-stitched leather upholstery, book-matched timber veneers, and polished metal trim. Balanced fill lighting preserving ambient cabin display glow.
-                      </p>
-                    </div>
-                    <div className="mt-8 pt-4 border-t border-bordercolor/60 font-mono text-[10px] text-mutedgray">
-                      SPECS: 5500K CAT16 Scene-Referred
-                    </div>
-                  </div>
-
-                  <div className="bg-surface border border-bordercolor p-8 flex flex-col justify-between">
-                    <div>
-                      <span className="font-mono text-xs text-gold">01.2 // RAMP MOTION</span>
-                      <h3 className="font-serif text-2xl text-alabaster mt-3 mb-4">Apron & Twilight Framing</h3>
-                      <p className="font-sans text-xs text-mutedgray leading-relaxed font-light">
-                        Ground-to-air ramp presence captured during golden hour and twilight windows. Controlled reflections along white aluminum and composite fuselage curves.
-                      </p>
-                    </div>
-                    <div className="mt-8 pt-4 border-t border-bordercolor/60 font-mono text-[10px] text-mutedgray">
-                      SPECS: CPL Polarization · Zero Gel Blowout
-                    </div>
-                  </div>
-
-                  <div className="bg-surface border border-bordercolor p-8 flex flex-col justify-between">
-                    <div>
-                      <span className="font-mono text-xs text-gold">01.3 // PRIVACY</span>
-                      <h3 className="font-serif text-2xl text-alabaster mt-3 mb-4">Tail Number Blinding</h3>
-                      <p className="font-sans text-xs text-mutedgray leading-relaxed font-light">
-                        Automated multi-frequency separation retouching to blind aircraft registration marks and confidential owner logos prior to listing publication.
-                      </p>
-                    </div>
-                    <div className="mt-8 pt-4 border-t border-bordercolor/60 font-mono text-[10px] text-mutedgray">
-                      SPECS: Security Certificate Included
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <section id="marine" className="border-b border-bordercolor px-6 py-24">
-              <div className="max-w-7xl mx-auto">
-                <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-bordercolor pb-6 mb-12">
-                  <div>
-                    <span className="font-mono text-xs text-gold uppercase tracking-[0.2em]">Practice Sector 02</span>
-                    <h2 className="font-serif text-3xl md:text-5xl text-alabaster mt-2">Marine & Superyacht Monographs</h2>
-                  </div>
-                  <span className="font-mono text-xs text-mutedgray uppercase tracking-widest mt-4 md:mt-0">
-                    Vieux-Port MTL · Lake Ontario · Coal Harbour · Monaco · Palma
-                  </span>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div className="bg-surface border border-bordercolor p-8">
-                    <span className="font-mono text-xs text-gold">02.1 // TACTILE MATERIALS</span>
-                    <h3 className="font-serif text-2xl text-alabaster mt-3 mb-4">Teak Joinery & Helm Detailing</h3>
-                    <p className="font-sans text-xs text-mutedgray leading-relaxed font-light mb-6">
-                      Capturing the tactile richness of teak decks, glass cockpit displays, and marine upholstery under intense harbor sunlight and soft evening twilight.
-                    </p>
-                    <div className="font-mono text-[10px] text-gold uppercase tracking-widest">
-                      [ Coverage: 30ft Day-Yachts to 150ft+ Superyachts ]
-                    </div>
-                  </div>
-
-                  <div className="bg-surface border border-bordercolor p-8">
-                    <span className="font-mono text-xs text-gold">02.2 // WATER MOTION</span>
-                    <h3 className="font-serif text-2xl text-alabaster mt-3 mb-4">Running Hull & Water Reflections</h3>
-                    <p className="font-sans text-xs text-mutedgray leading-relaxed font-light mb-6">
-                      Water-to-water chase vessel framing highlighting running hull lines, bow spray, and twilight harbor reflections across gel-coat and high-gloss finishes.
-                    </p>
-                    <div className="font-mono text-[10px] text-gold uppercase tracking-widest">
-                      [ Multi-Axis Polarized Capture Standard ]
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <section id="architecture" className="border-b border-bordercolor px-6 py-24 bg-surface/30">
-              <div className="max-w-7xl mx-auto">
-                <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-bordercolor pb-6 mb-12">
-                  <div>
-                    <span className="font-mono text-xs text-gold uppercase tracking-[0.2em]">Practice Sector 03</span>
-                    <h2 className="font-serif text-3xl md:text-5xl text-alabaster mt-2">Architectural & Spatial Monographs</h2>
-                  </div>
-                  <span className="font-mono text-xs text-mutedgray uppercase tracking-widest mt-4 md:mt-0">
-                    FBO Terminals · Private Hangars · Alpine Estates
-                  </span>
-                </div>
-
-                <div className="grid md:grid-cols-3 gap-8">
-                  <div className="bg-darkbox border border-bordercolor p-8">
-                    <h3 className="font-serif text-xl text-alabaster mb-3">FBO Terminals & Lounges</h3>
-                    <p className="font-sans text-xs text-mutedgray leading-relaxed font-light">
-                      Spatial light monographs for VIP arrival lounges, private passenger terminals, and executive handling facilities.
-                    </p>
-                  </div>
-                  <div className="bg-darkbox border border-bordercolor p-8">
-                    <h3 className="font-serif text-xl text-alabaster mb-3">Multi-Bay Heated Hangars</h3>
-                    <p className="font-sans text-xs text-mutedgray leading-relaxed font-light">
-                      Large-scale interior lighting setups shaping heavy jet hulls inside heated hangar bays with zero glare blowout.
-                    </p>
-                  </div>
-                  <div className="bg-darkbox border border-bordercolor p-8">
-                    <h3 className="font-serif text-xl text-alabaster mb-3">Modern Estate Compounds</h3>
-                    <p className="font-sans text-xs text-mutedgray leading-relaxed font-light">
-                      Minimalist architectural photography emphasizing raw concrete, timber joinery, curtain-wall glass, and spatial transitions.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <section id="remote-services" className="border-b border-bordercolor px-6 py-24">
-              <div className="max-w-7xl mx-auto">
-                <div className="text-center max-w-3xl mx-auto mb-16">
-                  <span className="font-mono text-xs text-gold uppercase tracking-[0.2em]">Practice Sector 04</span>
-                  <h2 className="font-serif text-3xl md:text-5xl text-alabaster mt-2 mb-4">Signature Remote Digital Asset-Tech</h2>
-                  <p className="font-sans text-xs text-mutedgray leading-relaxed font-light">
-                    High-margin remote digital capabilities engineered for international fleet managers, charter brokerages, and UHNW asset buyers.
-                  </p>
-                </div>
-
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  <div className="bg-surface border border-bordercolor p-6 flex flex-col justify-between">
-                    <div>
-                      <span className="font-mono text-[10px] text-gold">$3,500 CAD</span>
-                      <h3 className="font-serif text-lg text-alabaster mt-2 mb-3">Remote Pre-Purchase Audit</h3>
-                      <p className="font-sans text-xs text-mutedgray leading-relaxed font-light">
-                        Independent condition verification and material audit prior to asset acquisition.
-                      </p>
-                    </div>
-                    <div className="mt-6 pt-4 border-t border-bordercolor/60 font-mono text-[9px] text-mutedgray uppercase">
-                      48-Hour Rapid Delivery
-                    </div>
-                  </div>
-
-                  <div className="bg-surface border border-bordercolor p-6 flex flex-col justify-between">
-                    <div>
-                      <span className="font-mono text-[10px] text-gold">$2,500 – $4,500 CAD</span>
-                      <h3 className="font-serif text-lg text-alabaster mt-2 mb-3">Fleet Color & LUT Pack</h3>
-                      <p className="font-sans text-xs text-mutedgray leading-relaxed font-light">
-                        Display-calibrated sRGB / Display P3 color profiles for charter iPad listings.
-                      </p>
-                    </div>
-                    <div className="mt-6 pt-4 border-t border-bordercolor/60 font-mono text-[9px] text-mutedgray uppercase">
-                      Display P3 Standardized
-                    </div>
-                  </div>
-
-                  <div className="bg-surface border border-bordercolor p-6 flex flex-col justify-between">
-                    <div>
-                      <span className="font-mono text-[10px] text-gold">$3,500 – $7,500 CAD</span>
-                      <h3 className="font-serif text-lg text-alabaster mt-2 mb-3">Neural Livery Pre-Vis</h3>
-                      <p className="font-sans text-xs text-mutedgray leading-relaxed font-light">
-                        Pre-paint livery renders and interior refit staging for aircraft and yacht sales.
-                      </p>
-                    </div>
-                    <div className="mt-6 pt-4 border-t border-bordercolor/60 font-mono text-[9px] text-mutedgray uppercase">
-                      Virtual Refit Staging
-                    </div>
-                  </div>
-
-                  <div className="bg-surface border border-bordercolor p-6 flex flex-col justify-between">
-                    <div>
-                      <span className="font-mono text-[10px] text-gold">$8,500 – $18,000 CAD</span>
-                      <h3 className="font-serif text-lg text-alabaster mt-2 mb-3">Interactive Digital Twin</h3>
-                      <p className="font-sans text-xs text-mutedgray leading-relaxed font-light">
-                        Complete 3D digital portfolio and virtual charter showroom experience.
-                      </p>
-                    </div>
-                    <div className="mt-6 pt-4 border-t border-bordercolor/60 font-mono text-[9px] text-mutedgray uppercase">
-                      3D Portfolio Twin
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <section id="inspector" className="border-b border-bordercolor px-6 py-24 bg-surface/30">
-              <div className="max-w-5xl mx-auto">
-                <div className="border border-bordercolor bg-surface p-8 md:p-12">
-                  <div className="flex flex-col md:flex-row md:items-center justify-between border-b border-bordercolor pb-6 mb-8">
-                    <div>
-                      <span className="font-mono text-xs text-gold uppercase tracking-[0.2em]">05 // Technical Precision</span>
-                      <h2 className="font-serif text-3xl text-alabaster mt-1">Glare Control & CAT16 Calibration</h2>
-                    </div>
-                    <span className="font-mono text-[10px] text-gold border border-gold/40 px-3 py-1 mt-4 md:mt-0 uppercase">
-                      Security Guarantee Included
-                    </span>
-                  </div>
-
-                  <p className="font-sans text-xs text-mutedgray leading-relaxed font-light mb-8">
-                    Demonstrating zero window blowout on cockpit instrument panels and executive cabin displays. Move the slider below to simulate CAT16 scene-referred glare mitigation.
-                  </p>
-
-                  <div className="relative h-64 bg-darkbox border border-bordercolor overflow-hidden select-none">
-                    <div className="absolute inset-0 bg-gradient-to-r from-red-950/40 via-yellow-900/20 to-transparent flex items-center justify-start p-8">
-                      <div className="font-mono text-xs text-red-400">
-                        [ UNCALIBRATED ]<br/>
-                        · Glass Reflection Blowout<br/>
-                        · Display Clipping
-                      </div>
-                    </div>
-
-                    <div 
-                      className="absolute inset-y-0 right-0 bg-gradient-to-l from-emerald-950/40 via-gold/10 to-transparent border-l-2 border-gold flex items-center justify-end p-8 transition-all"
-                      style={{ left: `${glarePosition}%` }}
-                    >
-                      <div className="font-mono text-xs text-gold text-right">
-                        [ CAT16 CALIBRATED ]<br/>
-                        · Zero Glare Blowout<br/>
-                        · True Display Retention
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mt-6 flex items-center space-x-4">
-                    <span className="font-mono text-[10px] text-mutedgray uppercase">Uncalibrated</span>
-                    <input 
-                      type="range" 
-                      min="0" 
-                      max="100" 
-                      value={glarePosition} 
-                      onChange={(e) => setGlarePosition(e.target.value)}
-                      className="flex-1 accent-gold bg-darkbox h-1 cursor-pointer"
-                    />
-                    <span className="font-mono text-[10px] text-gold uppercase">CAT16 Calibrated</span>
-                  </div>
-
-                  <div className="mt-8 pt-6 border-t border-bordercolor/80 flex items-start space-x-4 text-xs font-mono text-mutedgray">
-                    <span className="text-gold font-bold">SECURITY GUARANTEE:</span>
-                    <span>All aircraft registration marks, vessel names, and private owner identifiers are blinded via frequency-separation retouching prior to publication unless explicitly cleared for release.</span>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <section id="commission" className="px-6 py-24 bg-void">
-              <div className="max-w-4xl mx-auto border border-bordercolor bg-surface p-8 md:p-14">
-                <div className="border-b border-bordercolor pb-8 mb-8 flex flex-col md:flex-row md:items-end justify-between">
-                  <div>
-                    <span className="font-mono text-xs text-gold uppercase tracking-[0.2em]">06 // Direct Intake</span>
-                    <h2 className="font-serif text-3xl md:text-4xl text-alabaster mt-1">Commission Portal</h2>
-                  </div>
-                  <div className="font-mono text-[10px] text-mutedgray mt-4 md:mt-0 text-right">
-                    <span>VIP AUTO-RESPONSE SLA:</span><br/>
-                    <span className="text-gold">Within 2 Business Hours</span>
-                  </div>
-                </div>
-
-                <form action="https://formspree.io/f/ouelletstudio@gmail.com" method="POST" className="space-y-8">
-                  <div>
-                    <label className="block font-mono text-xs text-gold uppercase tracking-wider mb-3">
-                      01 // Select Primary Practice Vertical
-                    </label>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 font-mono text-xs">
-                      {[
-                        { id: "aviation", label: "Aviation" },
-                        { id: "marine", label: "Marine" },
-                        { id: "architecture", label: "Spatial" },
-                        { id: "automotive", label: "Automotive" }
-                      ].map((item) => (
-                        <button
-                          key={item.id}
-                          type="button"
-                          onClick={() => handleVerticalChange(item.id)}
-                          className={`py-3 px-4 text-center border transition-all ${
-                            vertical === item.id 
-                              ? "border-gold bg-gold/10 text-gold font-medium" 
-                              : "border-bordercolor bg-darkbox text-mutedgray hover:border-gold/40"
-                          }`}
-                        >
-                          {item.label}
-                        </button>
-                      ))}
-                    </div>
-                    <input type="hidden" name="practice_vertical" value={vertical} />
-                  </div>
-
-                  <div>
-                    <label className="block font-mono text-xs text-gold uppercase tracking-wider mb-3">
-                      02 // Operating Hub / Base Location
-                    </label>
-                    <select 
-                      name="operating_hub"
-                      value={selectedHub}
-                      onChange={(e) => setSelectedHub(e.target.value)}
-                      className="w-full border border-bordercolor bg-darkbox px-4 py-3 font-mono text-xs text-alabaster focus:border-gold focus:outline-none"
-                    >
-                      {HUBS_DATA[vertical].map((hub) => (
-                        <option key={hub.value} value={hub.value}>
-                          {hub.label}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block font-mono text-xs text-gold uppercase tracking-wider mb-3">
-                      03 // Scope & Commercial Production Tier
-                    </label>
-                    <div className="space-y-3">
-                      {SCOPES_DATA.map((s) => (
-                        <label 
-                          key={s.id}
-                          className={`flex items-start p-4 border cursor-pointer transition-all ${
-                            scope === s.id 
-                              ? "border-gold bg-gold/5" 
-                              : "border-bordercolor bg-darkbox hover:border-gold/30"
-                          }`}
-                        >
-                          <input 
-                            type="radio" 
-                            name="production_scope" 
-                            value={s.title}
-                            checked={scope === s.id}
-                            onChange={() => setScope(s.id)}
-                            className="mt-1 accent-gold"
-                          />
-                          <div className="ml-4">
-                            <span className="block font-mono text-xs font-medium text-alabaster">{s.title}</span>
-                            <span className="block font-sans text-xs font-light text-mutedgray mt-1">{s.desc}</span>
-                          </div>
-                        </label>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-6 pt-2">
-                    <div>
-                      <label className="block font-mono text-xs text-gold uppercase tracking-wider mb-3">
-                        04 // Tail / Vessel Privacy
-                      </label>
-                      <select 
-                        name="privacy_preference"
-                        value={privacy}
-                        onChange={(e) => setPrivacy(e.target.value)}
-                        className="w-full border border-bordercolor bg-darkbox px-4 py-3 font-mono text-xs text-alabaster focus:border-gold focus:outline-none"
-                      >
-                        <option value="blind">Blind Marks / Retouch for Owner Privacy</option>
-                        <option value="retain">Retain Tail Registration / Vessel Name</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label className="block font-mono text-xs text-gold uppercase tracking-wider mb-3">
-                        05 // Commercial Usage Licensing
-                      </label>
-                      <select 
-                        name="licensing_scope"
-                        value={licenseBuyout}
-                        onChange={(e) => setLicenseBuyout(e.target.value)}
-                        className="w-full border border-bordercolor bg-darkbox px-4 py-3 font-mono text-xs text-alabaster focus:border-gold focus:outline-none"
-                      >
-                        <option value="standard">Standard Web & Charter Listing License (Included)</option>
-                        <option value="regional">Regional Print & Editorial (+25% Fee)</option>
-                        <option value="global">Global Commercial Buyout (+50% Fee)</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div className="space-y-6 pt-4 border-t border-bordercolor/80">
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div>
-                        <label className="block font-mono text-xs text-gold uppercase tracking-wider mb-2">06 // Full Name / Entity</label>
-                        <input 
-                          type="text" 
-                          name="client_name"
-                          required
-                          value={clientName}
-                          onChange={(e) => setClientName(e.target.value)}
-                          placeholder="Danick Ouellet" 
-                          className="w-full border border-bordercolor bg-darkbox px-4 py-3 font-sans text-xs text-alabaster placeholder:text-mutedgray/40 focus:border-gold focus:outline-none"
-                        />
-                      </div>
-                      <div>
-                        <label className="block font-mono text-xs text-gold uppercase tracking-wider mb-2">07 // Direct Email</label>
-                        <input 
-                          type="email" 
-                          name="client_email"
-                          required
-                          value={clientEmail}
-                          onChange={(e) => setClientEmail(e.target.value)}
-                          placeholder="direct@domain.com" 
-                          className="w-full border border-bordercolor bg-darkbox px-4 py-3 font-sans text-xs text-alabaster placeholder:text-mutedgray/40 focus:border-gold focus:outline-none"
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block font-mono text-xs text-gold uppercase tracking-wider mb-2">08 // Asset Details / Production Dates</label>
-                      <textarea 
-                        name="notes"
-                        rows="3"
-                        value={clientNotes}
-                        onChange={(e) => setClientNotes(e.target.value)}
-                        placeholder="Provide tail number, vessel length, FBO hangar location, or preferred schedule window..."
-                        className="w-full border border-bordercolor bg-darkbox px-4 py-3 font-sans text-xs text-alabaster placeholder:text-mutedgray/40 focus:border-gold focus:outline-none"
-                      ></textarea>
-                    </div>
-                  </div>
-
-                  <button 
-                    type="submit"
-                    className="w-full border border-gold bg-gold py-4 font-mono text-xs font-semibold tracking-[0.2em] text-void uppercase hover:bg-transparent hover:text-gold transition-all"
-                  >
-                    Submit Monograph Commission Request
-                  </button>
-
-                  <p className="font-mono text-[10px] text-mutedgray text-center uppercase tracking-widest">
-                    Direct Email: ouelletstudio@gmail.com · 2-Hour Response SLA
-                  </p>
-                </form>
-              </div>
-            </section>
-          </main>
-
-          <footer className="border-t border-bordercolor bg-darkbox py-12 px-6 font-mono text-xs text-mutedgray">
-            <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-              <div className="flex flex-col">
-                <span className="font-serif text-xl text-alabaster tracking-widest">OUELLET STUDIO</span>
-                <span className="text-[10px] uppercase text-gold mt-1">Light · Material · Motion</span>
-              </div>
-
-              <div className="text-center md:text-right text-[10px] uppercase tracking-widest space-y-1 text-mutedgray">
-                <div>Hubs: Vancouver (YVR/YPK) · Calgary (YYC) · Montreal (YUL/CYHU) · Toronto (YYZ/CYTZ)</div>
-                <div>Global Deployments: London (EGLF) · Dubai (OMDW) · Monaco · Palma</div>
-                <div className="text-gold pt-2">© 2026 OUELLET STUDIO. ALL RIGHTS RESERVED.</div>
-              </div>
-            </div>
-          </footer>
         </div>
-      );
-    }
 
-    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
-  </script>
+        <div class="commission-side">
+          <div class="label" style="margin-bottom:16px;">Brief summary</div>
+          <div class="summary-row"><span class="k">Sector</span><span class="v" id="sum-sector">—</span></div>
+          <div class="summary-row"><span class="k">Hub</span><span class="v" id="sum-hub">—</span></div>
+          <div class="summary-row"><span class="k">Tier</span><span class="v" id="sum-tier">—</span></div>
+          <div class="summary-row"><span class="k">Investment</span><span class="v mono" id="sum-price">—</span></div>
+          <div class="summary-row"><span class="k">Privacy</span><span class="v" id="sum-privacy">—</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block gutter">
+    <div class="container founder">
+      <div>
+        <div class="eyebrow">Founding Principal</div>
+        <h2 style="margin-top:14px;">Danick Ouellet — Creative Director</h2>
+        <p class="prose" style="margin-top:18px;">Red Seal certified carpenter with maritime crew experience. Observing how light reveals joinery, metal grain, and spatial form.</p>
+      </div>
+      <div>
+        <div class="eyebrow">Technical Proof</div>
+        <div class="proof-list" style="margin-top:14px;">
+          <div class="proof-item"><span class="mk">—</span>Scene-referred darktable color calibration (5500K CAT16 target)</div>
+          <div class="proof-item"><span class="mk">—</span>Frequency-separation tail number privacy guarantee</div>
+          <div class="proof-item"><span class="mk">—</span>10-year dual-NVMe archival SLA</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="gutter">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-sig">OUELLET STUDIO | LIGHT · MATERIAL · MOTION</div>
+          <div class="footer-hubs">Vancouver (YVR/YPK) · Calgary (YYC/YBW) · Montreal (CYUL/CYHU) · Toronto (CYYZ/CYTZ) · Global deployments by arrangement</div>
+        </div>
+        <a href="#commission" class="btn">Inquire for Commission</a>
+      </div>
+
+      <div class="copyright" id="copyright"></div>
+    </div>
+  </footer>
+
+</main>
+
+<script>
+(function(){
+  'use strict';
+
+  /* ---------------- data ---------------- */
+
+  var NODES = {
+    society:      { name:'YPK Airport Society',      spec:'Main terminal &amp; admin / spatial architecture',                         privacy:'Public frontage — standard clearance' },
+    sky:          { name:'Sky Helicopters',           spec:'Bell 429 / H125 fleet — reg. C-GXNP / hangar light',                       privacy:'Registration cleared — written approval on file' },
+    integrity:    { name:'Integrity Flight Support',  spec:'VIP FBO lounge &amp; apron row',                                            privacy:'Client aircraft — approval required per tail' },
+    airborne:     { name:'Airborne Management',       spec:'Cirrus fleet — reg. C-OWVA / glass cockpit avionics',                      privacy:'Registration cleared — written approval on file' },
+    heliproducts: { name:'Heliproducts Overhaul',     spec:'15,000 sq ft MRO hangar / turbine joinery',                                 privacy:'Shop floor — identifiers blinded by default' }
+  };
+
+  var HUBS_BY_SECTOR = {
+    aviation:     ['CYUL (Montréal-Trudeau)','CYHU (Saint-Hubert)','CYYZ (Pearson)','CYTZ (Billy Bishop)','YVR / YPK (Vancouver)','CYYC (Calgary)','EGLF (London Farnborough)','OMDW (Dubai VVIP)'],
+    marine:       ['Old Port MTL','Port Credit (GTA)','Coal Harbour (YVR)','Muskoka','Monaco','Palma','Dubai Harbour','Private slip'],
+    architecture: ['Greater Montreal','Greater Toronto','Metro Vancouver','Calgary / Rockies','Laurentians','Muskoka','Cotswolds, UK','Global'],
+    hospitality:  ['Greater Montreal','Greater Toronto','Metro Vancouver','Calgary / Rockies','Laurentians','Muskoka','Cotswolds, UK','Global'],
+    automotive:   ['Greater Montreal','Greater Toronto','Metro Vancouver','Calgary / Rockies','Laurentians','Muskoka','Cotswolds, UK','Global'],
+    concepts:     ['Global remote / digital delivery','CYUL / CYHU (Montreal FBO)','CYYZ / CYTZ (Toronto FBO)','YVR / YPK (Vancouver FBO)','CYYC (Calgary FBO)','EGLF (London Farnborough)','OMDW (Dubai South VVIP)']
+  };
+
+  /* ---------------- nav active-section highlight ---------------- */
+
+  var navLinks = document.querySelectorAll('[data-nav-link]');
+  var sectionIds = ['hero','yachting','aviation','architecture','hospitality','automotive','concepts','ypk-ecosystem','remote-services','commission'];
+  var sections = sectionIds.map(function(id){ return document.getElementById(id); }).filter(Boolean);
+
+  function setActiveNav(id){
+    navLinks.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('data-nav-link') === id);
+    });
+  }
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) setActiveNav(e.target.id);
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    sections.forEach(function(s){ io.observe(s); });
+  }
+
+  var burgerBtn = document.getElementById('burger-btn');
+  var mobileNav = document.getElementById('mobile-nav');
+  if (burgerBtn && mobileNav) {
+    burgerBtn.addEventListener('click', function(){ mobileNav.classList.toggle('open'); });
+    mobileNav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ mobileNav.classList.remove('open'); });
+    });
+  }
+
+  /* ---------------- airfield schematic ---------------- */
+
+  var nodeCards = document.querySelectorAll('.node-card');
+  var inspEyebrow = document.getElementById('insp-eyebrow');
+  var inspSpec = document.getElementById('insp-spec');
+  var inspPrivacy = document.getElementById('insp-privacy');
+
+  function selectNode(id){
+    var node = NODES[id];
+    if (!node) return;
+    nodeCards.forEach(function(c){
+      c.classList.toggle('selected', c.getAttribute('data-node') === id);
+    });
+    inspEyebrow.innerHTML = 'Active Node // ' + node.name;
+    inspSpec.innerHTML = node.spec;
+    inspPrivacy.textContent = node.privacy;
+  }
+
+  nodeCards.forEach(function(c){
+    c.addEventListener('click', function(){ selectNode(c.getAttribute('data-node')); });
+  });
+
+  /* ---------------- commission wizard ---------------- */
+
+  var step = 1;
+  var TOTAL_STEPS = 5;
+  var hubOptionsEl = document.getElementById('hub-options');
+  var stepPanels = document.querySelectorAll('.step-panel');
+  var stepDots = document.querySelectorAll('.step-dot');
+  var btnBack = document.getElementById('btn-back');
+  var btnNext = document.getElementById('btn-next');
+  var wizardWrap = document.getElementById('wizard-wrap');
+  var confirmBox = document.getElementById('confirm-box');
+
+  var sumSector = document.getElementById('sum-sector');
+  var sumHub = document.getElementById('sum-hub');
+  var sumTier = document.getElementById('sum-tier');
+  var sumPrice = document.getElementById('sum-price');
+  var sumPrivacy = document.getElementById('sum-privacy');
+
+  function getChecked(name){
+    var el = document.querySelector('input[name="' + name + '"]:checked');
+    return el || null;
+  }
+
+  function refreshSelectedStyling(groupName){
+    document.querySelectorAll('.opt-list[data-group="' + groupName + '"] .opt').forEach(function(opt){
+      var input = opt.querySelector('input');
+      opt.classList.toggle('selected', !!(input && input.checked));
+    });
+  }
+
+  function renderHubOptions(sector){
+    var hubs = HUBS_BY_SECTOR[sector] || [];
+    var html = '';
+    hubs.forEach(function(h){
+      html += '<label class="opt"><span class="opt-name">' +
+        '<input type="radio" name="hub" value="' + h.replace(/"/g,'&quot;') + '" data-hub-label="' + h.replace(/"/g,'&quot;') + '">' +
+        h + '</span></label>';
+    });
+    hubOptionsEl.innerHTML = html;
+  }
+
+  document.body.addEventListener('change', function(e){
+    var t = e.target;
+    if (!t || t.tagName !== 'INPUT') return;
+
+    if (t.name === 'sector') {
+      renderHubOptions(t.value);
+      sumSector.textContent = t.getAttribute('data-sector-label') || t.value;
+      sumHub.textContent = '—'; // step two depends on step one — clear any stale hub from a different sector
+      refreshSelectedStyling('sector');
+      updateNextState();
+    }
+    if (t.name === 'hub') {
+      sumHub.textContent = t.getAttribute('data-hub-label') || t.value;
+      refreshSelectedStyling('hub');
+      updateNextState();
+    }
+    if (t.name === 'tier') {
+      sumTier.textContent = t.getAttribute('data-tier-label') || t.value;
+      var priceCell = t.closest('.opt').querySelector('.opt-price');
+      sumPrice.textContent = priceCell ? priceCell.textContent : '—';
+      refreshSelectedStyling('tier');
+      updateNextState();
+    }
+    if (t.name === 'privacy') {
+      sumPrivacy.textContent = t.getAttribute('data-privacy-label') || t.value;
+      refreshSelectedStyling('privacy');
+      updateNextState();
+    }
+  });
+
+  document.getElementById('cf-name').addEventListener('input', updateNextState);
+  document.getElementById('cf-email').addEventListener('input', updateNextState);
+
+  function canAdvance(){
+    if (step === 1) return !!getChecked('sector');
+    if (step === 2) return !!getChecked('hub');
+    if (step === 3) return !!getChecked('tier');
+    if (step === 4) return !!getChecked('privacy');
+    if (step === 5) {
+      var name = document.getElementById('cf-name').value.trim();
+      var email = document.getElementById('cf-email').value.trim();
+      return !!name && !!email;
+    }
+    return false;
+  }
+
+  function updateNextState(){
+    var ok = canAdvance();
+    btnNext.disabled = !ok;
+    btnNext.style.opacity = ok ? '1' : '0.35';
+    btnNext.textContent = step === TOTAL_STEPS ? 'Submit Commission Brief for Review' : 'Next';
+  }
+
+  function renderStep(){
+    stepPanels.forEach(function(p){
+      p.classList.toggle('active', Number(p.getAttribute('data-step')) === step);
+    });
+    stepDots.forEach(function(d){
+      var n = Number(d.getAttribute('data-dot'));
+      d.classList.toggle('done', n < step);
+      d.classList.toggle('current', n === step);
+      d.textContent = n < step ? '✓' : String(n);
+    });
+    btnBack.disabled = step === 1;
+    btnBack.style.opacity = step === 1 ? '0.35' : '1';
+    updateNextState();
+  }
+
+  btnBack.addEventListener('click', function(){
+    if (step > 1) { step -= 1; renderStep(); }
+  });
+
+  btnNext.addEventListener('click', function(){
+    if (!canAdvance()) return;
+    if (step < TOTAL_STEPS) {
+      step += 1;
+      renderStep();
+    } else {
+      wizardWrap.style.display = 'none';
+      confirmBox.classList.add('active');
+    }
+  });
+
+  renderStep();
+
+  /* ---------------- footer ---------------- */
+  document.getElementById('copyright').textContent = '© ' + new Date().getFullYear() + ' Ouellet Studio. All rights reserved.';
+
+})();
+</script>
 </body>
 </html>
