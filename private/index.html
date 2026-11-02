@@ -33,6 +33,9 @@
   .back{display:block; text-align:center; margin-top:24px; font-size:12px; color:var(--muted); text-decoration:none;}
   .back:hover{color:var(--champagne);}
   form.sent{display:none;}
+  .err{display:none; text-align:center; padding:12px 0 0; font-size:13px; color:var(--champagne);}
+  .err.active{display:block;}
+  .err a{color:var(--champagne);}
 </style>
 </head>
 <body>
@@ -47,7 +50,8 @@
     <button type="submit">Request Access Link</button>
   </form>
 
-  <p class="msg" id="access-msg">If that email has a client vault, a secure access link is on its way. Otherwise, reach out directly and we'll get one set up.</p>
+  <p class="msg" id="access-msg">Request received. If that email has a client vault, a secure access link is on its way. Otherwise, reach out directly and we'll get one set up.</p>
+  <p class="err" id="access-err">Couldn't reach our intake system. <a href="#" id="access-err-mailto">Click here to request access by email instead</a>.</p>
 
   <a href="/" class="back">&larr; Back to Ouellet Studio</a>
 </div>
@@ -55,14 +59,43 @@
 <script>
 (function(){
   'use strict';
+
+  // Same Formspree form as the main site's commission wizard — set up at
+  // https://formspree.io pointed at ouelletstudio@gmail.com, then replace
+  // FORM_ID below with the id from your endpoint (formspree.io/f/FORM_ID).
+  var FORM_ENDPOINT = 'https://formspree.io/f/FORM_ID';
+  var INTAKE_EMAIL = 'ouelletstudio@gmail.com';
+
   var form = document.getElementById('access-form');
   var msg = document.getElementById('access-msg');
+  var err = document.getElementById('access-err');
+  var errMailto = document.getElementById('access-err-mailto');
+  var btn = form.querySelector('button');
+
   form.addEventListener('submit', function(e){
     e.preventDefault();
-    // No backend is wired up yet — this records intent only, it does not
-    // send a real email or grant access. See project notes before launch.
-    form.classList.add('sent');
-    msg.classList.add('active');
+    var email = document.getElementById('va-email').value.trim();
+    var payload = { form_type: 'Client Vault access request', email: email };
+
+    err.classList.remove('active');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).then(function(r){
+      if (!r.ok) throw new Error('form http ' + r.status);
+      form.classList.add('sent');
+      msg.classList.add('active');
+    }).catch(function(){
+      btn.disabled = false;
+      btn.textContent = 'Request Access Link';
+      errMailto.href = 'mailto:' + INTAKE_EMAIL + '?subject=' + encodeURIComponent('Client Vault access request') +
+        '&body=' + encodeURIComponent('Email on file: ' + email);
+      err.classList.add('active');
+    });
   });
 })();
 </script>

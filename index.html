@@ -710,6 +710,9 @@
               <button class="btn" id="btn-back" disabled style="opacity:0.35;">Back</button>
               <button class="btn btn-solid" id="btn-next" disabled>Next</button>
             </div>
+            <p class="prose" id="submit-error" style="display:none; margin-top:16px; color:var(--champagne);">
+              Couldn't reach our intake system. <a id="submit-error-mailto" href="#" style="color:var(--champagne);">Click here to send your brief by email instead</a> — it won't be lost.
+            </p>
           </div>
 
           <div class="confirm-box" id="confirm-box">
@@ -1011,15 +1014,67 @@
     if (step > 1) { step -= 1; renderStep(); }
   });
 
+  // Formspree endpoint for this site's two forms (commission wizard + Client
+  // Vault access request). Create a free form at https://formspree.io
+  // pointed at ouelletstudio@gmail.com, then replace FORM_ID below with the
+  // id from the endpoint Formspree gives you (https://formspree.io/f/FORM_ID).
+  var FORM_ENDPOINT = 'https://formspree.io/f/FORM_ID';
+  var INTAKE_EMAIL = 'ouelletstudio@gmail.com';
+
+  function submitLead(payload, onSuccess, onError){
+    fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).then(function(r){
+      if (r.ok) { onSuccess(); } else { onError(); }
+    }).catch(onError);
+  }
+
+  function mailtoFallback(payload, subjectPrefix){
+    var subject = encodeURIComponent(subjectPrefix + ' — ' + (payload.name || 'New inquiry'));
+    var lines = Object.keys(payload).map(function(k){ return k + ': ' + payload[k]; });
+    return 'mailto:' + INTAKE_EMAIL + '?subject=' + subject + '&body=' + encodeURIComponent(lines.join('\n'));
+  }
+
+  var submitError = document.getElementById('submit-error');
+  var submitErrorMailto = document.getElementById('submit-error-mailto');
+
   btnNext.addEventListener('click', function(){
     if (!canAdvance()) return;
     if (step < TOTAL_STEPS) {
       step += 1;
       renderStep();
-    } else {
+      return;
+    }
+
+    var payload = {
+      form_type: 'Commission brief',
+      sector: sumSector.textContent,
+      hub: sumHub.textContent,
+      tier: sumTier.textContent,
+      investment: sumPrice.textContent,
+      privacy: sumPrivacy.textContent,
+      name: document.getElementById('cf-name').value.trim(),
+      organization: document.getElementById('cf-org').value.trim() || '—',
+      email: document.getElementById('cf-email').value.trim(),
+      phone: document.getElementById('cf-phone').value.trim() || '—',
+      notes: document.getElementById('cf-notes').value.trim() || '—'
+    };
+
+    submitError.style.display = 'none';
+    btnNext.disabled = true;
+    btnNext.textContent = 'Sending…';
+
+    submitLead(payload, function(){
       wizardWrap.style.display = 'none';
       confirmBox.classList.add('active');
-    }
+    }, function(){
+      btnNext.disabled = false;
+      btnNext.textContent = 'Submit Commission Brief for Review';
+      submitErrorMailto.href = mailtoFallback(payload, 'Commission brief');
+      submitError.style.display = 'block';
+    });
   });
 
   renderStep();
