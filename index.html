@@ -375,7 +375,7 @@
 
     <div class="status">
       <span class="hubs">MONTREAL (CYUL/CYHU) · TORONTO (CYYZ/CYTZ) · VANCOUVER (YVR/YPK)</span>
-      <span class="pill"><span class="dot"></span><span id="header-metar">CYUL 270900Z 24008KT 15SM FEW040 BKN100</span> · CAT16 DAYLIGHT 5500K · SYSTEM: ACTIVE</span>
+      <span class="pill"><span class="dot"></span><span id="header-metar">CYUL METAR · CONNECTING</span> · CAT16 DAYLIGHT 5500K · SYSTEM: ACTIVE</span>
     </div>
 
     <button class="burger" aria-label="Menu" id="burger-btn">
@@ -1071,23 +1071,34 @@
 
   /* ---------------- live METAR ---------------- */
 
-  function loadMetar(icao, textEl, noteEl){
+  function loadMetar(icao, textEl, noteEl, fallbackText){
     if (!textEl) return;
-    fetch('https://aviationweather.gov/api/data/metar?ids=' + icao)
-      .then(function(r){ if (!r.ok) throw new Error('metar http ' + r.status); return r.text(); })
+    var station = icao;
+    // Served by our own /api/metar (server-side fetch, 5-min cache).
+    fetch('/api/metar?ids=' + icao)
+      .then(function(r){
+        if (r.status !== 200) throw new Error('metar http ' + r.status);
+        station = r.headers.get('X-Metar-Station') || icao;
+        return r.text();
+      })
       .then(function(raw){
         var line = (raw || '').trim().split('\n')[0];
         if (!line) throw new Error('empty metar response');
         textEl.textContent = line;
-        if (noteEl) noteEl.textContent = 'Live feed — aviationweather.gov';
+        if (noteEl) {
+          noteEl.textContent = (station === icao)
+            ? 'Live feed — aviationweather.gov'
+            : 'Live feed — nearest reporting station ' + station + ' (' + icao + ' issues no METAR)';
+        }
       })
       .catch(function(){
-        // Offline, blocked, or the API is down — leave the static reference text in place.
+        // Feed unavailable: never present stale text as live.
+        if (fallbackText) textEl.textContent = fallbackText;
         if (noteEl) noteEl.textContent = 'Reference reading, not a live feed';
       });
   }
 
-  loadMetar('CYUL', document.getElementById('header-metar'), null);
+  loadMetar('CYUL', document.getElementById('header-metar'), null, 'CYUL METAR UNAVAILABLE');
   loadMetar('CYPK', document.getElementById('ypk-metar'), document.getElementById('ypk-metar-note'));
 
   /* ---------------- footer ---------------- */
