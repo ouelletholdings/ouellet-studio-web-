@@ -150,7 +150,7 @@
   nav.center a:hover, nav.center a.active{color:var(--champagne); border-bottom-color:var(--champagne);}
 
   .status{display:flex; flex-direction:column; align-items:flex-end; gap:6px;}
-  .status .hubs{font-family:var(--font-mono); font-size:10px; color:var(--muted); letter-spacing:0.02em; white-space:nowrap;}
+  .status .hubs{font-family:var(--font-mono); font-size:10px; color:rgba(237,230,218,0.55); letter-spacing:0.02em; white-space:nowrap;}
   .pill{
     display:inline-flex; align-items:center; gap:6px;
     font-family:var(--font-mono); font-size:10px; letter-spacing:0.04em; color:var(--bone);
@@ -158,6 +158,7 @@
   }
   .dot{width:6px; height:6px; border-radius:50%; background:var(--champagne); animation:pulse 2.2s ease-in-out infinite; flex:none;}
   @keyframes pulse{0%,100%{opacity:1;} 50%{opacity:0.35;}}
+  .ai-badge{display:inline-block; font-family:var(--font-mono); font-size:10px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--champagne); border:1px solid rgba(201,179,126,0.4); border-radius:2px; padding:4px 9px; background:rgba(201,179,126,0.06);}
 
   .burger{display:none; flex-direction:column; gap:4px; background:none; border:none; cursor:pointer; padding:8px;}
   .burger span{width:20px; height:1px; background:var(--bone); display:block;}
@@ -435,13 +436,12 @@
     <div class="container">
       <div class="eyebrow">Practice 02 // Aviation</div>
       <h2 style="margin-top:14px;">Executive Aviation &amp; Apron Monograph Suite</h2>
-      <p class="practice-sub">Heavy jets, turboprops, glass cockpits, hangar event light, and 4K gimbal passes.</p>
+      <p class="practice-sub">Heavy jets, turboprops, glass cockpits, and hangar event light.</p>
       <div class="meta-grid">
         <div class="meta-cell">
           <span class="label">Investment</span>
           <div class="val"><ul>
             <li><span class="price">$2,500 – $9,500 CAD</span> — Heavy jet monograph</li>
-            <li><span class="price">$2,500 CAD</span> — 4K gimbal motion pass</li>
           </ul></div>
         </div>
         <div class="meta-cell">
@@ -517,7 +517,8 @@
     <div class="container">
       <div class="eyebrow">Practice 06 // Speculative Concepts</div>
       <h2 style="margin-top:14px;">Speculative Concepts &amp; Neural Pre-Vis</h2>
-      <p class="practice-sub">Pre-construction architectural modeling, aircraft livery specs, and cabin refit pre-vis.</p>
+      <span class="ai-badge" style="margin-top:12px; display:inline-block;">Concept · AI-Assisted</span>
+      <p class="practice-sub" style="margin-top:14px;">Pre-construction architectural modeling, aircraft livery specs, and cabin refit pre-vis. Every deliverable in this practice is an AI-assisted pre-visualization render, never a captured shoot.</p>
       <div class="meta-grid">
         <div class="meta-cell">
           <span class="label">Investment</span>
@@ -567,10 +568,8 @@
           </div>
         </div>
         <div class="cta-row">
-          <a href="#commission" class="btn btn-solid">Pre-Book Holiday 4K Pass — $2,500 CAD</a>
-          <a href="#commission" class="btn">Order Fine-Art Acrylic Display — $1,850 CAD</a>
+          <a href="#commission" class="btn btn-solid">Order Fine-Art Acrylic Display — $1,850 CAD</a>
         </div>
-        <p class="label" style="margin-top:12px;">Holiday 4K pass available Dec 15–28 only.</p>
       </div>
     </div>
   </section>
@@ -593,6 +592,7 @@
         </div>
         <div class="svc-card">
           <h3>Neural Livery &amp; Surface Spec Study</h3>
+          <span class="ai-badge" style="margin-bottom:10px; display:inline-block;">Concept · AI-Assisted</span>
           <span class="price mono">$3,500 – $7,500 CAD</span>
           <p>Photorealistic paint and cabin refit renders in true golden-hour light, before physical execution.</p>
         </div>
@@ -738,6 +738,7 @@
         <div>
           <div class="footer-sig">OUELLET STUDIO | LIGHT · MATERIAL · MOTION</div>
           <div class="footer-hubs">Based in Montreal · Deployed globally by arrangement</div>
+          <div class="footer-hubs" style="margin-top:4px;">Direct / WhatsApp: +1 (438) 860-9011</div>
         </div>
         <a href="#commission" class="btn">Inquire for Commission</a>
       </div>
