@@ -27,7 +27,7 @@ Services span **$1,250 – $18,000 CAD**, from single-session showcase passes th
 
 ## Contact & SLA
 
-Commission inquiries submitted through the site's intake form are reviewed by the Creative Director and answered **within 2 business hours**.
+Commission inquiries submitted through the site's intake form are reviewed by the Creative Director and answered **within 24–48 hours**.
 
 ## Technical / production standards
 
