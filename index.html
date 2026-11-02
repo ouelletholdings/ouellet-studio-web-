@@ -312,6 +312,8 @@
 </style>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://www.ouelletstudio.com/#organization","name":"Ouellet Studio","founder":{"@type":"Person","name":"Danick Ouellet"},"priceRange":"$1,250 - $18,000 CAD","areaServed":["Vancouver (YVR/YPK)","Montreal (CYUL/CYHU)","Toronto (CYYZ/CYTZ)","Calgary (CYYC/CYBW)","London (EGLF/EGKB)","Dubai (OMDW/OMAD)","Monaco (Port Hercule)"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Remote Digital Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Remote Pre-Purchase Visual Audit"},"price":"3500","priceCurrency":"CAD"},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Interactive 3D Digital Twin Master Portfolio"},"priceSpecification":{"@type":"PriceSpecification","minPrice":"8500","maxPrice":"18000","priceCurrency":"CAD"}}]}}]}
 </script>
@@ -343,7 +345,7 @@
 
     <div class="status">
       <span class="hubs">MONTREAL (CYUL/CYHU) · TORONTO (CYYZ/CYTZ) · VANCOUVER (YVR/YPK)</span>
-      <span class="pill"><span class="dot"></span>CYUL 270900Z 24008KT 15SM FEW040 BKN100 · CAT16 DAYLIGHT 5500K · SYSTEM: ACTIVE</span>
+      <span class="pill"><span class="dot"></span><span id="header-metar">CYUL 270900Z 24008KT 15SM FEW040 BKN100</span> · CAT16 DAYLIGHT 5500K · SYSTEM: ACTIVE</span>
     </div>
 
     <button class="burger" aria-label="Menu" id="burger-btn">
@@ -541,37 +543,12 @@
 
       <div class="metar-bar">
         <span class="dot"></span>
-        CYPK 261400Z 28012KT 15SM FEW030 BKN080 +14°C
-        <span class="label" style="margin-left:auto;">Reference reading, not a live feed</span>
+        <span id="ypk-metar">CYPK 261400Z 28012KT 15SM FEW030 BKN080 +14°C</span>
+        <span class="label" style="margin-left:auto;" id="ypk-metar-note">Reference reading — attempting live feed</span>
       </div>
 
-      <div class="node-grid" id="node-grid">
-        <button class="node-card selected" data-node="society">
-          <div class="num">NODE 01</div>
-          <div class="name">YPK Airport Society</div>
-          <div class="sub">Main terminal &amp; admin / spatial architecture</div>
-        </button>
-        <button class="node-card" data-node="sky">
-          <div class="num">NODE 02</div>
-          <div class="name">Sky Helicopters</div>
-          <div class="sub">Bell 429 / H125 fleet — reg. C-GXNP / hangar light</div>
-        </button>
-        <button class="node-card" data-node="integrity">
-          <div class="num">NODE 03</div>
-          <div class="name">Integrity Flight Support</div>
-          <div class="sub">VIP FBO lounge &amp; apron row</div>
-        </button>
-        <button class="node-card" data-node="airborne">
-          <div class="num">NODE 04</div>
-          <div class="name">Airborne Management</div>
-          <div class="sub">Cirrus fleet — reg. C-OWVA / glass cockpit avionics</div>
-        </button>
-        <button class="node-card" data-node="heliproducts">
-          <div class="num">NODE 05</div>
-          <div class="name">Heliproducts Overhaul</div>
-          <div class="sub">15,000 sq ft MRO hangar / turbine joinery</div>
-        </button>
-      </div>
+      <div id="airfield-map" style="height: 450px; background: var(--slate); margin-top: 28px; border: 1px solid var(--zinc); z-index: 1;"></div>
+      <p class="label" style="margin-top:10px;">Schematic placement — illustrative node positions within the CYPK airfield footprint, not surveyed coordinates. Click a marker to inspect.</p>
 
       <div class="inspector">
         <div class="eyebrow" id="insp-eyebrow">Active Node // YPK Airport Society</div>
@@ -765,6 +742,14 @@
         <a href="#commission" class="btn">Inquire for Commission</a>
       </div>
 
+      <div class="footer-hubs" style="margin-top:28px; display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+        <a href="/index/carbon-fiber" style="color:var(--muted); text-decoration:none; border-bottom:1px solid var(--zinc);">Carbon Fiber — Material Index</a>
+        <span aria-hidden="true">·</span>
+        <a href="/index/bombardier-global-7500" style="color:var(--muted); text-decoration:none; border-bottom:1px solid var(--zinc);">Bombardier Global 7500 — Airframe Index</a>
+        <span aria-hidden="true">·</span>
+        <a href="/private" class="mono" style="color:var(--champagne); text-decoration:none; letter-spacing:0.06em;">🔒 CLIENT VAULT LOGIN</a>
+      </div>
+
       <div class="copyright" id="copyright"></div>
     </div>
   </footer>
@@ -787,9 +772,9 @@
 
   var HUBS_BY_SECTOR = {
     aviation:     ['CYUL (Montréal-Trudeau)','CYHU (Saint-Hubert)','CYYZ (Pearson)','CYTZ (Billy Bishop)','YVR / YPK (Vancouver)','CYYC (Calgary)','EGLF (London Farnborough)','OMDW (Dubai VVIP)'],
-    marine:       ['Old Port MTL','Port Credit (GTA)','Coal Harbour (YVR)','Muskoka','Monaco','Palma','Dubai Harbour','Private slip'],
-    architecture: ['Greater Montreal','Greater Toronto','Metro Vancouver','Calgary / Rockies','Laurentians','Muskoka','Cotswolds, UK','Global'],
-    hospitality:  ['Greater Montreal','Greater Toronto','Metro Vancouver','Calgary / Rockies','Laurentians','Muskoka','Cotswolds, UK','Global'],
+    marine:       ['Old Port MTL','Port Credit (GTA)','Coal Harbour (YVR)','Muskoka','Monaco','Palma','Cannes (Vieux Port/Canto)','Dubai Harbour','Private slip'],
+    architecture: ['Greater Montreal','Greater Toronto','Metro Vancouver','Calgary / Rockies','Laurentians','Muskoka','Cotswolds, UK','Bali (Uluwatu/Canggu)','Singapore','Global'],
+    hospitality:  ['Greater Montreal','Greater Toronto','Metro Vancouver','Calgary / Rockies','Laurentians','Muskoka','Cotswolds, UK','Bali / Singapore','Global'],
     automotive:   ['Greater Montreal','Greater Toronto','Metro Vancouver','Calgary / Rockies','Laurentians','Muskoka','Cotswolds, UK','Global'],
     concepts:     ['Global remote / digital delivery','CYUL / CYHU (Montreal FBO)','CYYZ / CYTZ (Toronto FBO)','YVR / YPK (Vancouver FBO)','CYYC (Calgary FBO)','EGLF (London Farnborough)','OMDW (Dubai South VVIP)']
   };
@@ -826,25 +811,71 @@
 
   /* ---------------- airfield schematic ---------------- */
 
-  var nodeCards = document.querySelectorAll('.node-card');
   var inspEyebrow = document.getElementById('insp-eyebrow');
   var inspSpec = document.getElementById('insp-spec');
   var inspPrivacy = document.getElementById('insp-privacy');
+  var airfieldMarkers = {};
 
   function selectNode(id){
     var node = NODES[id];
     if (!node) return;
-    nodeCards.forEach(function(c){
-      c.classList.toggle('selected', c.getAttribute('data-node') === id);
-    });
     inspEyebrow.innerHTML = 'Active Node // ' + node.name;
     inspSpec.innerHTML = node.spec;
     inspPrivacy.textContent = node.privacy;
+    Object.keys(airfieldMarkers).forEach(function(k){
+      airfieldMarkers[k].setStyle({ fillOpacity: k === id ? 0.95 : 0.45, radius: k === id ? 10 : 8 });
+    });
   }
 
-  nodeCards.forEach(function(c){
-    c.addEventListener('click', function(){ selectNode(c.getAttribute('data-node')); });
-  });
+  /* ---------------- airfield schematic map (Leaflet) ---------------- */
+
+  var mapEl = document.getElementById('airfield-map');
+  if (mapEl && window.L) {
+    var CYPK_CENTER = [49.2161, -122.7095];
+    var map = L.map('airfield-map', { scrollWheelZoom: false }).setView(CYPK_CENTER, 14);
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+      subdomains: 'abcd',
+      maxZoom: 19
+    }).addTo(map);
+
+    // Real reference airports, parsed from the embedded GeoJSON.
+    try {
+      var geoEl = document.querySelector('script[type="application/geo+json"]');
+      var geo = geoEl ? JSON.parse(geoEl.textContent) : null;
+      if (geo && geo.features) {
+        geo.features.forEach(function(f){
+          var c = f.geometry.coordinates; // [lon, lat]
+          L.circleMarker([c[1], c[0]], { radius: 5, color: '#8E929B', weight: 1, fillColor: '#8E929B', fillOpacity: 0.6 })
+            .addTo(map)
+            .bindTooltip(f.properties.icao + ' — ' + f.properties.name);
+        });
+      }
+    } catch (e) { /* malformed geojson — skip reference markers, map still renders */ }
+
+    // YPK tenant nodes — illustrative schematic positions within the CYPK
+    // footprint (see on-page caption); not surveyed building coordinates.
+    var NODE_OFFSETS = {
+      society:      [0.0009, -0.0012],
+      sky:          [-0.0011, 0.0008],
+      integrity:    [0.0011, 0.0011],
+      airborne:     [-0.0009, -0.0009],
+      heliproducts: [0.0005, 0.0017]
+    };
+
+    Object.keys(NODES).forEach(function(id){
+      var off = NODE_OFFSETS[id] || [0, 0];
+      var marker = L.circleMarker([CYPK_CENTER[0] + off[0], CYPK_CENTER[1] + off[1]], {
+        radius: 8, color: '#C9B37E', weight: 2, fillColor: '#C9B37E', fillOpacity: 0.45
+      }).addTo(map);
+      marker.bindTooltip(NODES[id].name);
+      marker.on('click', function(){ selectNode(id); });
+      airfieldMarkers[id] = marker;
+    });
+
+    selectNode('society');
+  }
 
   /* ---------------- commission wizard ---------------- */
 
@@ -971,6 +1002,27 @@
   });
 
   renderStep();
+
+  /* ---------------- live METAR ---------------- */
+
+  function loadMetar(icao, textEl, noteEl){
+    if (!textEl) return;
+    fetch('https://aviationweather.gov/api/data/metar?ids=' + icao)
+      .then(function(r){ if (!r.ok) throw new Error('metar http ' + r.status); return r.text(); })
+      .then(function(raw){
+        var line = (raw || '').trim().split('\n')[0];
+        if (!line) throw new Error('empty metar response');
+        textEl.textContent = line;
+        if (noteEl) noteEl.textContent = 'Live feed — aviationweather.gov';
+      })
+      .catch(function(){
+        // Offline, blocked, or the API is down — leave the static reference text in place.
+        if (noteEl) noteEl.textContent = 'Reference reading, not a live feed';
+      });
+  }
+
+  loadMetar('CYUL', document.getElementById('header-metar'), null);
+  loadMetar('CYPK', document.getElementById('ypk-metar'), document.getElementById('ypk-metar-note'));
 
   /* ---------------- footer ---------------- */
   document.getElementById('copyright').textContent = '© ' + new Date().getFullYear() + ' Ouellet Studio. All rights reserved.';

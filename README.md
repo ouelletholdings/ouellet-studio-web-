@@ -45,6 +45,9 @@ Commission inquiries submitted through the site's intake form are reviewed by th
 | `sitemap.xml` | Single-entry XML sitemap (this is a one-page site) for Google Search Console and other crawlers. |
 | `favicon.ico`, `favicon.svg`, `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`, `android-chrome-192x192.png`, `android-chrome-512x512.png`, `site.webmanifest` | The Ouellet Studio "O" monogram favicon set — vector master + every required raster/legacy size, wired up via the `<link>` tags in `index.html`'s `<head>`. |
 | `robots.txt` | Crawler directives — allows all, points to `sitemap.xml` and `llms.txt` at root. |
+| `index/carbon-fiber/index.html` | Standalone material-index page (`/index/carbon-fiber`) — real editorial content on carbon fiber weaves and how the studio lights/shoots them. Listed in `sitemap.xml`. |
+| `index/bombardier-global-7500/index.html` | Standalone airframe-index page (`/index/bombardier-global-7500`) — shoot-planning reference for the Global 7500. Listed in `sitemap.xml`. |
+| `private/index.html` | "Client Vault" access-request page (`/private`, linked from the footer). No backend is wired up: the form records submit intent client-side only and does not send email or grant real access yet. `noindex`'d. |
 | `README.md` | This file. |
 
 ## Deployment
