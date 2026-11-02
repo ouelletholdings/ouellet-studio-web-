@@ -8,7 +8,7 @@
 - Domain: https://www.ouelletstudio.com
 - Practice sectors, in priority order: Yachting & Marine (primary), Executive Aviation, Architecture & Spatial Design, Boutique Hospitality & Destinations, Automotive & Coachbuilding, Speculative Concepts & Neural Pre-Vis
 - Pricing range across all services: $1,250 – $18,000 CAD
-- Base operational hubs: Vancouver (YVR/YPK), Montreal (CYUL/CYHU), Toronto (CYYZ/CYTZ), Calgary (CYYC/CYBW), London (EGLF/EGKB), Dubai (OMDW/OMAD), Monaco (Port Hercule)
+- Base operational hubs: Vancouver (YVR/YPK), Montreal (CYUL/CYHU), Toronto (CYYZ/CYTZ), Calgary (CYYC/CYBW), London (EGLF/EGKB), Dubai (OMDW), Monaco (Port Hercule)
 - Color calibration standard: every deliverable is graded to a 5500K CAT16 daylight target in darktable before any creative color grade is applied
 - Privacy policy: aircraft registration marks, vessel names, and other identifying marks are treated as private by default and are only published with the owner's or operator's written approval on file
 - Response SLA: commission inquiries are reviewed and answered within 24–48 hours

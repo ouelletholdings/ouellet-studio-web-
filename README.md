@@ -19,7 +19,7 @@ A sixth, clearly labeled category — **Speculative Concepts & Neural Pre-Vis** 
 
 ## Base hubs
 
-Vancouver (YVR/YPK) · Montreal (CYUL/CYHU) · Toronto (CYYZ/CYTZ) · Calgary (CYYC/CYBW) · London (EGLF/EGKB) · Dubai (OMDW/OMAD) · Monaco (Port Hercule)
+Vancouver (YVR/YPK) · Montreal (CYUL/CYHU) · Toronto (CYYZ/CYTZ) · Calgary (CYYC/CYBW) · London (EGLF/EGKB) · Dubai (OMDW) · Monaco (Port Hercule)
 
 ## Pricing
 
