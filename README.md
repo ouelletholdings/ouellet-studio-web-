@@ -47,7 +47,7 @@ Commission inquiries submitted through the site's intake form are reviewed by th
 | `robots.txt` | Crawler directives — allows all, points to `sitemap.xml` and `llms.txt` at root. |
 | `index/carbon-fiber/index.html` | Standalone material-index page (`/index/carbon-fiber`) — real editorial content on carbon fiber weaves and how the studio lights/shoots them. Listed in `sitemap.xml`. |
 | `index/bombardier-global-7500/index.html` | Standalone airframe-index page (`/index/bombardier-global-7500`) — shoot-planning reference for the Global 7500. Listed in `sitemap.xml`. |
-| `private/index.html` | "Client Vault" access-request page (`/private`, linked from the footer). No backend is wired up: the form records submit intent client-side only and does not send email or grant real access yet. `noindex`'d. |
+| `private/index.html` | "Client Vault" access-request page (`/private`, linked from the footer). Honest request-access form, not a real login: submits to the same Formspree endpoint as the commission wizard, with a `mailto:` fallback if the POST fails. `noindex`'d. |
 | `README.md` | This file. |
 
 ## Deployment
