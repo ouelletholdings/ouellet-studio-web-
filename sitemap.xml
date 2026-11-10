@@ -1,10 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.ouelletstudio.com/</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.ouelletstudio.com/images/aviation-photography-single-engine-aircraft-copper-livery-pitt-meadows-apron-2400.jpg</image:loc>
+      <image:title>Copper Single-Engine Aircraft, Pitt Meadows Apron</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ouelletstudio.com/images/aviation-photography-single-engine-aircraft-tail-livery-low-sun-pitt-meadows-1200.jpg</image:loc>
+      <image:title>Aircraft Tail and Livery in Low Sun</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ouelletstudio.com/images/aviation-photography-copper-cowl-canopy-detail-mountains-pitt-meadows-1200.jpg</image:loc>
+      <image:title>Copper Cowl and Canopy Detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ouelletstudio.com/images/aviation-photography-light-helicopter-hangar-profile-pitt-meadows-2400.jpg</image:loc>
+      <image:title>Light Helicopter in Hangar Light</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ouelletstudio.com/images/aviation-photography-two-light-helicopters-open-hangar-door-pitt-meadows-1200.jpg</image:loc>
+      <image:title>Two Light Helicopters, Open Hangar Door</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ouelletstudio.com/images/aviation-photography-helicopter-tail-rotors-hangar-pitt-meadows-1200.jpg</image:loc>
+      <image:title>Helicopter Tail Rotors, Hangar</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ouelletstudio.com/images/architecture-photography-airport-lobby-inlaid-floor-mosaic-window-shadows-pitt-meadows-1200.jpg</image:loc>
+      <image:title>Airport Lobby, Inlaid Floor Mosaic</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ouelletstudio.com/images/architecture-photography-walnut-boardroom-table-airfield-view-pitt-meadows-1200.jpg</image:loc>
+      <image:title>Walnut Boardroom Table, Airfield View</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ouelletstudio.com/images/aviation-photography-twin-engine-aircraft-apron-high-angle-pitt-meadows-1200.jpg</image:loc>
+      <image:title>Twin-engine aircraft, high angle</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ouelletstudio.com/images/aviation-photography-twin-engine-aircraft-nose-propellers-landing-gear-pitt-meadows-1200.jpg</image:loc>
+      <image:title>Nose, propellers and gear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ouelletstudio.com/images/yacht-photography-polished-stainless-bollard-hull-detail-vancouver-1080.jpg</image:loc>
+      <image:title>Polished Stainless Bollard, Hull Detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ouelletstudio.com/images/yacht-photography-teak-cap-rail-stainless-stanchions-vancouver-1080.jpg</image:loc>
+      <image:title>Teak Cap Rail and Stainless Stanchions</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ouelletstudio.com/images/automotive-photography-luxury-suv-crest-bonnet-detail-vancouver-1080.jpg</image:loc>
+      <image:title>Crest and Bonnet Detail, Luxury SUV</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ouelletstudio.com/images/automotive-photography-green-estate-rear-wheel-performance-vancouver-1080.jpg</image:loc>
+      <image:title>Green Performance Estate, Rear Wheel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ouelletstudio.com/images/automotive-photography-blue-supercar-wheel-side-intake-vancouver-1080.jpg</image:loc>
+      <image:title>Blue Supercar, Wheel and Side Intake</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ouelletstudio.com/images/automotive-photography-stone-grey-off-roader-low-front-three-quarter-vancouver-1080.jpg</image:loc>
+      <image:title>Stone Grey Off-Roader, Low Front Three-Quarter</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.ouelletstudio.com/index/carbon-fiber</loc>
