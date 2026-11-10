@@ -254,10 +254,15 @@
     font-family:var(--font-mono); font-size:12px; color:var(--bone);
     background:var(--deepdark); border:1px solid var(--zinc); padding:12px 16px; margin-top:24px;
   }
-  #airfield-map .leaflet-tile-pane{filter:invert(1) hue-rotate(180deg) brightness(0.92) contrast(0.92) saturate(0.7);}
-  #airfield-map .leaflet-control-attribution{background:rgba(13,14,17,0.85)!important; color:var(--muted)!important;}
-  #airfield-map .leaflet-control-attribution a{color:var(--champagne)!important;}
-  #airfield-map .leaflet-tooltip{background:var(--deepdark); color:var(--bone); border:1px solid var(--zinc); font-family:var(--font-sans); font-size:12px;}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;}
+  .partner-grid{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--zinc);border:1px solid var(--zinc);}
+  .partner-card{background:var(--deepdark);padding:26px 24px;display:flex;flex-direction:column;gap:10px;}
+  .partner-card h3{margin:0;font-family:var(--font-display);font-weight:400;font-size:24px;line-height:1.2;color:var(--bone);}
+  .partner-role{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--champagne);}
+  .partner-card a{font-family:var(--font-mono);font-size:13px;color:var(--muted);text-decoration:none;}
+  .partner-card a:hover{color:var(--bone);}
+  @media(max-width:900px){.partner-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.partner-grid{grid-template-columns:1fr;}}
   .node-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(190px,1fr)); gap:1px; background:var(--zinc); margin-top:28px; border:1px solid var(--zinc);}
   .node-card{
     background:var(--slate); padding:18px 18px 20px; text-align:left; border:none; color:var(--bone);
@@ -356,8 +361,8 @@
     .btn{white-space:normal; text-align:center; line-height:1.3;}
     .hero .actions{flex-direction:column; align-items:stretch;}
     .hero .actions .btn{width:100%;}
-    .inspector .cta-row{flex-direction:column;}
-    .inspector .cta-row .btn{width:100%;}
+    .cta-row{flex-direction:column;}
+    .cta-row .btn{width:100%;}
     .wizard-nav{flex-direction:column;}
     .wizard-nav .btn{width:100%;}
     .footer-top{flex-direction:column; align-items:flex-start;}
@@ -371,8 +376,6 @@
 </style>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ImageObject","contentUrl":"https://www.ouelletstudio.com/images/yacht-photography-motor-yacht-bow-teak-rail-vancouver-hero-desktop-2400.jpg","url":"https://www.ouelletstudio.com/images/yacht-photography-motor-yacht-bow-teak-rail-vancouver-hero-desktop-2400.jpg","name":"Motor Yacht Bow, Teak Rail","caption":"The bow and teak cap rail of a motor yacht, Vancouver.","description":"Low-angle study of a white motor yacht bow and teak cap rail against a clear blue sky in Vancouver. Photographed by Ouellet Studio for yacht brokers, owners and shipyards.","width":2400,"height":1350,"encodingFormat":"image/jpeg","keywords":"yacht photography, motor yacht, yacht bow, teak rail, luxury yacht, Vancouver, marine photography, yacht broker photography, hull detail, quiet luxury, Ouellet Studio","creator":{"@type":"Person","name":"Danick Ouellet"},"creditText":"Ouellet Studio","copyrightNotice":"\u00a9 Ouellet Studio \u2014 All Rights Reserved","license":"https://www.ouelletstudio.com/privacy","acquireLicensePage":"https://www.ouelletstudio.com/#commission"}
 </script>
@@ -381,9 +384,6 @@
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"ImageObject","contentUrl":"https://www.ouelletstudio.com/images/aviation-photography-single-engine-aircraft-copper-livery-pitt-meadows-apron-2400.jpg","url":"https://www.ouelletstudio.com/images/aviation-photography-single-engine-aircraft-copper-livery-pitt-meadows-apron-2400.jpg","name":"Copper Single-Engine Aircraft, Pitt Meadows Apron","caption":"Low profile of a single-engine aircraft in a copper and white livery, Pitt Meadows apron.","description":"Low-angle study of a single-engine aircraft in a copper and white livery on the Pitt Meadows apron under a deep blue sky. Photographed by Ouellet Studio.","width":2400,"height":1600,"encodingFormat":"image/jpeg","keywords":"aviation photography, executive aviation, single-engine aircraft, Pitt Meadows, CYPK, apron, quiet luxury, Ouellet Studio","creator":{"@type":"Person","name":"Danick Ouellet"},"creditText":"Ouellet Studio","copyrightNotice":"\u00a9 Ouellet Studio \u2014 All Rights Reserved","license":"https://www.ouelletstudio.com/privacy","acquireLicensePage":"https://www.ouelletstudio.com/#commission"},{"@type":"ImageObject","contentUrl":"https://www.ouelletstudio.com/images/aviation-photography-single-engine-aircraft-tail-livery-low-sun-pitt-meadows-1200.jpg","url":"https://www.ouelletstudio.com/images/aviation-photography-single-engine-aircraft-tail-livery-low-sun-pitt-meadows-1200.jpg","name":"Aircraft Tail and Livery in Low Sun","caption":"Tail and livery of a single-engine aircraft in low sun.","description":"Rear three-quarter view of a single-engine aircraft in copper, white and black livery with a tall tail fin lit by low sun, Pitt Meadows. Photographed by Ouellet Studio.","width":1200,"height":800,"encodingFormat":"image/jpeg","keywords":"aviation photography, aircraft livery, tail fin, golden light, Pitt Meadows, CYPK, Ouellet Studio","creator":{"@type":"Person","name":"Danick Ouellet"},"creditText":"Ouellet Studio","copyrightNotice":"\u00a9 Ouellet Studio \u2014 All Rights Reserved","license":"https://www.ouelletstudio.com/privacy","acquireLicensePage":"https://www.ouelletstudio.com/#commission"},{"@type":"ImageObject","contentUrl":"https://www.ouelletstudio.com/images/aviation-photography-copper-cowl-canopy-detail-mountains-pitt-meadows-1200.jpg","url":"https://www.ouelletstudio.com/images/aviation-photography-copper-cowl-canopy-detail-mountains-pitt-meadows-1200.jpg","name":"Copper Cowl and Canopy Detail","caption":"Copper cowl and canopy of a single-engine aircraft, mountains beyond.","description":"Detail of the copper cowl, canopy and propeller blade of a single-engine aircraft with mountains beyond, Pitt Meadows. Photographed by Ouellet Studio.","width":1200,"height":800,"encodingFormat":"image/jpeg","keywords":"aviation photography, aircraft detail, paint, cowl, canopy, Pitt Meadows, CYPK, Ouellet Studio","creator":{"@type":"Person","name":"Danick Ouellet"},"creditText":"Ouellet Studio","copyrightNotice":"\u00a9 Ouellet Studio \u2014 All Rights Reserved","license":"https://www.ouelletstudio.com/privacy","acquireLicensePage":"https://www.ouelletstudio.com/#commission"},{"@type":"ImageObject","contentUrl":"https://www.ouelletstudio.com/images/aviation-photography-light-helicopter-hangar-profile-pitt-meadows-2400.jpg","url":"https://www.ouelletstudio.com/images/aviation-photography-light-helicopter-hangar-profile-pitt-meadows-2400.jpg","name":"Light Helicopter in Hangar Light","caption":"Light helicopter in grey livery parked in a hangar.","description":"Light helicopter in grey livery parked in a hangar at Pitt Meadows with two more helicopters behind. Photographed by Ouellet Studio.","width":2400,"height":1600,"encodingFormat":"image/jpeg","keywords":"helicopter photography, hangar, light helicopter, Pitt Meadows, CYPK, Ouellet Studio","creator":{"@type":"Person","name":"Danick Ouellet"},"creditText":"Ouellet Studio","copyrightNotice":"\u00a9 Ouellet Studio \u2014 All Rights Reserved","license":"https://www.ouelletstudio.com/privacy","acquireLicensePage":"https://www.ouelletstudio.com/#commission"},{"@type":"ImageObject","contentUrl":"https://www.ouelletstudio.com/images/aviation-photography-two-light-helicopters-open-hangar-door-pitt-meadows-1200.jpg","url":"https://www.ouelletstudio.com/images/aviation-photography-two-light-helicopters-open-hangar-door-pitt-meadows-1200.jpg","name":"Two Light Helicopters, Open Hangar Door","caption":"Two light helicopters in a hangar with the door open.","description":"Two light helicopters with doors open inside a hangar at Pitt Meadows, backlit by the open hangar door. Photographed by Ouellet Studio.","width":1200,"height":800,"encodingFormat":"image/jpeg","keywords":"helicopter photography, hangar, backlight, Pitt Meadows, CYPK, Ouellet Studio","creator":{"@type":"Person","name":"Danick Ouellet"},"creditText":"Ouellet Studio","copyrightNotice":"\u00a9 Ouellet Studio \u2014 All Rights Reserved","license":"https://www.ouelletstudio.com/privacy","acquireLicensePage":"https://www.ouelletstudio.com/#commission"},{"@type":"ImageObject","contentUrl":"https://www.ouelletstudio.com/images/aviation-photography-helicopter-tail-rotors-hangar-pitt-meadows-1200.jpg","url":"https://www.ouelletstudio.com/images/aviation-photography-helicopter-tail-rotors-hangar-pitt-meadows-1200.jpg","name":"Helicopter Tail Rotors, Hangar","caption":"Tail rotors and fins of two light helicopters in hangar light.","description":"Tail rotors and painted tail fins of two light helicopters inside a hangar at Pitt Meadows. Photographed by Ouellet Studio.","width":1200,"height":800,"encodingFormat":"image/jpeg","keywords":"aviation photography, helicopter, tail rotor, hangar, Pitt Meadows, CYPK, Ouellet Studio","creator":{"@type":"Person","name":"Danick Ouellet"},"creditText":"Ouellet Studio","copyrightNotice":"\u00a9 Ouellet Studio \u2014 All Rights Reserved","license":"https://www.ouelletstudio.com/privacy","acquireLicensePage":"https://www.ouelletstudio.com/#commission"},{"@type":"ImageObject","contentUrl":"https://www.ouelletstudio.com/images/architecture-photography-airport-lobby-inlaid-floor-mosaic-window-shadows-pitt-meadows-1200.jpg","url":"https://www.ouelletstudio.com/images/architecture-photography-airport-lobby-inlaid-floor-mosaic-window-shadows-pitt-meadows-1200.jpg","name":"Airport Lobby, Inlaid Floor Mosaic","caption":"Sunlit airport lobby with an inlaid floor mosaic, Pitt Meadows.","description":"High-angle view of a sunlit airport lobby at Pitt Meadows, long window shadows falling across a tiled floor with an inlaid stone mosaic. Photographed by Ouellet Studio.","width":1200,"height":800,"encodingFormat":"image/jpeg","keywords":"architecture photography, interior, lobby, mosaic floor, natural light, glass curtain wall, Pitt Meadows, CYPK, Ouellet Studio","creator":{"@type":"Person","name":"Danick Ouellet"},"creditText":"Ouellet Studio","copyrightNotice":"\u00a9 Ouellet Studio \u2014 All Rights Reserved","license":"https://www.ouelletstudio.com/privacy","acquireLicensePage":"https://www.ouelletstudio.com/#commission"},{"@type":"ImageObject","contentUrl":"https://www.ouelletstudio.com/images/architecture-photography-walnut-boardroom-table-airfield-view-pitt-meadows-1200.jpg","url":"https://www.ouelletstudio.com/images/architecture-photography-walnut-boardroom-table-airfield-view-pitt-meadows-1200.jpg","name":"Walnut Boardroom Table, Airfield View","caption":"Walnut boardroom table with tall windows over an airfield.","description":"Low view along a walnut boardroom table toward tall windows overlooking an airfield, Pitt Meadows. Photographed by Ouellet Studio.","width":1200,"height":800,"encodingFormat":"image/jpeg","keywords":"architecture photography, interior, walnut table, boardroom, Pitt Meadows, CYPK, Ouellet Studio","creator":{"@type":"Person","name":"Danick Ouellet"},"creditText":"Ouellet Studio","copyrightNotice":"\u00a9 Ouellet Studio \u2014 All Rights Reserved","license":"https://www.ouelletstudio.com/privacy","acquireLicensePage":"https://www.ouelletstudio.com/#commission"},{"@type":"ImageObject","contentUrl":"https://www.ouelletstudio.com/images/aviation-photography-twin-engine-aircraft-apron-high-angle-pitt-meadows-1200.jpg","url":"https://www.ouelletstudio.com/images/aviation-photography-twin-engine-aircraft-apron-high-angle-pitt-meadows-1200.jpg","name":"Twin-Engine Aircraft, High Angle","caption":"Twin-engine aircraft on the Pitt Meadows apron from above.","description":"Twin-engine aircraft parked on the Pitt Meadows apron seen from above. Photographed by Ouellet Studio.","width":1200,"height":800,"encodingFormat":"image/jpeg","keywords":"aviation photography, twin-engine aircraft, apron, Pitt Meadows, CYPK, Ouellet Studio","creator":{"@type":"Person","name":"Danick Ouellet"},"creditText":"Ouellet Studio","copyrightNotice":"\u00a9 Ouellet Studio \u2014 All Rights Reserved","license":"https://www.ouelletstudio.com/privacy","acquireLicensePage":"https://www.ouelletstudio.com/#commission"},{"@type":"ImageObject","contentUrl":"https://www.ouelletstudio.com/images/aviation-photography-twin-engine-aircraft-nose-propellers-landing-gear-pitt-meadows-1200.jpg","url":"https://www.ouelletstudio.com/images/aviation-photography-twin-engine-aircraft-nose-propellers-landing-gear-pitt-meadows-1200.jpg","name":"Nose, Propellers and Gear","caption":"Nose, propellers and nose gear of a twin-engine aircraft.","description":"Nose, propellers and nose gear of a twin-engine aircraft on the apron. Photographed by Ouellet Studio.","width":1200,"height":800,"encodingFormat":"image/jpeg","keywords":"aviation photography, twin-engine aircraft, apron, Pitt Meadows, CYPK, Ouellet Studio","creator":{"@type":"Person","name":"Danick Ouellet"},"creditText":"Ouellet Studio","copyrightNotice":"\u00a9 Ouellet Studio \u2014 All Rights Reserved","license":"https://www.ouelletstudio.com/privacy","acquireLicensePage":"https://www.ouelletstudio.com/#commission"},{"@type":"ImageObject","contentUrl":"https://www.ouelletstudio.com/images/yacht-photography-polished-stainless-bollard-hull-detail-vancouver-1080.jpg","url":"https://www.ouelletstudio.com/images/yacht-photography-polished-stainless-bollard-hull-detail-vancouver-1080.jpg","name":"Polished Stainless Bollard, Hull Detail","caption":"Polished stainless bollard and fairlead on a white motor yacht.","description":"Close detail of a polished stainless steel bollard set into the white gelcoat of a motor yacht, Vancouver. Photographed by Ouellet Studio.","width":1080,"height":720,"encodingFormat":"image/jpeg","keywords":"yacht photography, yacht detail, stainless steel hardware, bollard, gelcoat, Vancouver, quiet luxury, Ouellet Studio","creator":{"@type":"Person","name":"Danick Ouellet"},"creditText":"Ouellet Studio","copyrightNotice":"\u00a9 Ouellet Studio \u2014 All Rights Reserved","license":"https://www.ouelletstudio.com/privacy","acquireLicensePage":"https://www.ouelletstudio.com/#commission"},{"@type":"ImageObject","contentUrl":"https://www.ouelletstudio.com/images/yacht-photography-teak-cap-rail-stainless-stanchions-vancouver-1080.jpg","url":"https://www.ouelletstudio.com/images/yacht-photography-teak-cap-rail-stainless-stanchions-vancouver-1080.jpg","name":"Teak Cap Rail and Stainless Stanchions","caption":"Teak cap rail and stainless stanchions beneath a yacht overhang.","description":"Teak cap rail and polished stainless stanchions beneath the overhang of a white motor yacht against a deep blue sky, Vancouver. Photographed by Ouellet Studio.","width":1080,"height":720,"encodingFormat":"image/jpeg","keywords":"yacht photography, teak, cap rail, stainless steel, yacht joinery, Vancouver, quiet luxury, Ouellet Studio","creator":{"@type":"Person","name":"Danick Ouellet"},"creditText":"Ouellet Studio","copyrightNotice":"\u00a9 Ouellet Studio \u2014 All Rights Reserved","license":"https://www.ouelletstudio.com/privacy","acquireLicensePage":"https://www.ouelletstudio.com/#commission"},{"@type":"ImageObject","contentUrl":"https://www.ouelletstudio.com/images/automotive-photography-luxury-suv-crest-bonnet-detail-vancouver-1080.jpg","url":"https://www.ouelletstudio.com/images/automotive-photography-luxury-suv-crest-bonnet-detail-vancouver-1080.jpg","name":"Crest and Bonnet Detail, Luxury SUV","caption":"Enamel crest on the sculpted bonnet of a dark luxury SUV.","description":"Close detail of an enamel crest on the sculpted bonnet of a dark luxury SUV, paint reflecting the city, Vancouver. Photographed by Ouellet Studio.","width":1080,"height":720,"encodingFormat":"image/jpeg","keywords":"automotive photography, luxury car detail, paint depth, bonnet, crest, Vancouver, quiet luxury, Ouellet Studio","creator":{"@type":"Person","name":"Danick Ouellet"},"creditText":"Ouellet Studio","copyrightNotice":"\u00a9 Ouellet Studio \u2014 All Rights Reserved","license":"https://www.ouelletstudio.com/privacy","acquireLicensePage":"https://www.ouelletstudio.com/#commission"},{"@type":"ImageObject","contentUrl":"https://www.ouelletstudio.com/images/automotive-photography-green-estate-rear-wheel-performance-vancouver-1080.jpg","url":"https://www.ouelletstudio.com/images/automotive-photography-green-estate-rear-wheel-performance-vancouver-1080.jpg","name":"Green Performance Estate, Rear Wheel","caption":"Deep green performance estate, rear wheel and shoulder line.","description":"Deep green performance estate car, rear wheel and shoulder line beside a dark reflecting pool, Vancouver. Photographed by Ouellet Studio.","width":1080,"height":720,"encodingFormat":"image/jpeg","keywords":"automotive photography, performance estate, forged wheel, paint, Vancouver, quiet luxury, Ouellet Studio","creator":{"@type":"Person","name":"Danick Ouellet"},"creditText":"Ouellet Studio","copyrightNotice":"\u00a9 Ouellet Studio \u2014 All Rights Reserved","license":"https://www.ouelletstudio.com/privacy","acquireLicensePage":"https://www.ouelletstudio.com/#commission"},{"@type":"ImageObject","contentUrl":"https://www.ouelletstudio.com/images/automotive-photography-blue-supercar-wheel-side-intake-vancouver-1080.jpg","url":"https://www.ouelletstudio.com/images/automotive-photography-blue-supercar-wheel-side-intake-vancouver-1080.jpg","name":"Blue Supercar, Wheel and Side Intake","caption":"Metallic blue supercar, forged wheel, red caliper and side intake.","description":"Metallic blue supercar with bronze forged wheel, red caliper and sculpted side intake on brick paving, Vancouver. Photographed by Ouellet Studio.","width":1080,"height":720,"encodingFormat":"image/jpeg","keywords":"automotive photography, supercar, forged wheel, metallic paint, brake caliper, Vancouver, quiet luxury, Ouellet Studio","creator":{"@type":"Person","name":"Danick Ouellet"},"creditText":"Ouellet Studio","copyrightNotice":"\u00a9 Ouellet Studio \u2014 All Rights Reserved","license":"https://www.ouelletstudio.com/privacy","acquireLicensePage":"https://www.ouelletstudio.com/#commission"},{"@type":"ImageObject","contentUrl":"https://www.ouelletstudio.com/images/automotive-photography-stone-grey-off-roader-low-front-three-quarter-vancouver-1080.jpg","url":"https://www.ouelletstudio.com/images/automotive-photography-stone-grey-off-roader-low-front-three-quarter-vancouver-1080.jpg","name":"Stone Grey Off-Roader, Low Front Three-Quarter","caption":"Stone grey luxury off-roader, low front three-quarter beneath a concrete overhang.","description":"Low front three-quarter of a stone grey luxury off-roader beneath a concrete overhang, Vancouver. Photographed by Ouellet Studio.","width":1080,"height":720,"encodingFormat":"image/jpeg","keywords":"automotive photography, luxury SUV, front three-quarter, Vancouver, quiet luxury, Ouellet Studio","creator":{"@type":"Person","name":"Danick Ouellet"},"creditText":"Ouellet Studio","copyrightNotice":"\u00a9 Ouellet Studio \u2014 All Rights Reserved","license":"https://www.ouelletstudio.com/privacy","acquireLicensePage":"https://www.ouelletstudio.com/#commission"},{"@type":"ImageObject","contentUrl":"https://www.ouelletstudio.com/images/concept-render-black-helicopter-open-cockpit-glass-panel-carbon-seats-1080.jpg","url":"https://www.ouelletstudio.com/images/concept-render-black-helicopter-open-cockpit-glass-panel-carbon-seats-1080.jpg","name":"Concept Helicopter, Open Cockpit","caption":"AI-assisted concept render: open cockpit with glass instrument panel and carbon-shell seats.","description":"AI-assisted concept render of a black helicopter with its door open, showing a glass instrument panel, carbon-shell seats and blue leather. Concept imagery by Ouellet Studio, not a captured shoot.","width":1080,"height":1440,"encodingFormat":"image/jpeg","keywords":"concept render, AI-assisted pre-visualization, helicopter concept, cockpit, glass panel, carbon seats, aircraft cabin pre-vis, Ouellet Studio","creator":{"@type":"Person","name":"Danick Ouellet"},"creditText":"Ouellet Studio","copyrightNotice":"\u00a9 Ouellet Studio \u2014 All Rights Reserved","license":"https://www.ouelletstudio.com/privacy","acquireLicensePage":"https://www.ouelletstudio.com/#commission"},{"@type":"ImageObject","contentUrl":"https://www.ouelletstudio.com/images/concept-render-black-helicopter-rear-three-quarter-ducted-tail-rotor-hangar-1080.jpg","url":"https://www.ouelletstudio.com/images/concept-render-black-helicopter-rear-three-quarter-ducted-tail-rotor-hangar-1080.jpg","name":"Concept Helicopter, Rear Three-Quarter","caption":"AI-assisted concept render: rear three-quarter of a black helicopter with a ducted tail rotor.","description":"AI-assisted concept render of a black helicopter from the rear three-quarter with a ducted tail rotor and red navigation lights on a wet apron beside a hangar. Concept imagery by Ouellet Studio, not a captured shoot.","width":1080,"height":1440,"encodingFormat":"image/jpeg","keywords":"concept render, AI-assisted pre-visualization, helicopter concept, ducted tail rotor, aircraft livery pre-vis, hangar, Ouellet Studio","creator":{"@type":"Person","name":"Danick Ouellet"},"creditText":"Ouellet Studio","copyrightNotice":"\u00a9 Ouellet Studio \u2014 All Rights Reserved","license":"https://www.ouelletstudio.com/privacy","acquireLicensePage":"https://www.ouelletstudio.com/#commission"},{"@type":"ImageObject","contentUrl":"https://www.ouelletstudio.com/images/concept-render-black-helicopter-side-profile-open-hangar-wet-apron-1080.jpg","url":"https://www.ouelletstudio.com/images/concept-render-black-helicopter-side-profile-open-hangar-wet-apron-1080.jpg","name":"Concept Helicopter, Side Profile","caption":"AI-assisted concept render: black helicopter in side profile before an open hangar.","description":"AI-assisted concept render of a black helicopter in side profile before an open hangar, its glossy fuselage reflected in the wet apron. Concept imagery by Ouellet Studio, not a captured shoot.","width":1080,"height":1440,"encodingFormat":"image/jpeg","keywords":"concept render, AI-assisted pre-visualization, helicopter concept, aircraft livery pre-vis, side profile, hangar, Ouellet Studio","creator":{"@type":"Person","name":"Danick Ouellet"},"creditText":"Ouellet Studio","copyrightNotice":"\u00a9 Ouellet Studio \u2014 All Rights Reserved","license":"https://www.ouelletstudio.com/privacy","acquireLicensePage":"https://www.ouelletstudio.com/#commission"}]}
-</script>
-<script type="application/geo+json">
-{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"icao":"YVR","name":"Vancouver International Airport"},"geometry":{"type":"Point","coordinates":[-123.1815,49.1967]}},{"type":"Feature","properties":{"icao":"CYPK","name":"Pitt Meadows Airport"},"geometry":{"type":"Point","coordinates":[-122.7095,49.2161]}},{"type":"Feature","properties":{"icao":"CYUL","name":"Montréal-Trudeau International"},"geometry":{"type":"Point","coordinates":[-73.7408,45.4706]}},{"type":"Feature","properties":{"icao":"CYHU","name":"Montréal-Saint-Hubert"},"geometry":{"type":"Point","coordinates":[-73.4169,45.5175]}},{"type":"Feature","properties":{"icao":"CYYZ","name":"Toronto Pearson International"},"geometry":{"type":"Point","coordinates":[-79.6306,43.6777]}},{"type":"Feature","properties":{"icao":"CYTZ","name":"Billy Bishop Toronto City"},"geometry":{"type":"Point","coordinates":[-79.3962,43.6275]}},{"type":"Feature","properties":{"icao":"CYYC","name":"Calgary International"},"geometry":{"type":"Point","coordinates":[-114.0076,51.1215]}},{"type":"Feature","properties":{"icao":"EGLF","name":"London Farnborough"},"geometry":{"type":"Point","coordinates":[-0.7764,51.2757]}},{"type":"Feature","properties":{"icao":"OMDW","name":"Dubai World Central - Al Maktoum Intl"},"geometry":{"type":"Point","coordinates":[55.1614,24.8967]}},{"type":"Feature","properties":{"name":"Port Hercule, Monaco"},"geometry":{"type":"Point","coordinates":[7.4256,43.7325]}},{"type":"Feature","properties":{"name":"Vieux Port / Port Canto, Cannes"},"geometry":{"type":"Point","coordinates":[7.0174,43.5513]}},{"type":"Feature","properties":{"name":"Old Port of Montreal"},"geometry":{"type":"Point","coordinates":[-73.5532,45.5048]}}]}
 </script>
 <!-- Image alt-text formula for future photography assets: "[Subject] at [location], [light/time]. [Two or three materials]. Light · Material · Motion." -->
 </head>
@@ -795,7 +795,7 @@
     <div class="container">
       <div class="eyebrow">Aviation // Home Airfield · Pitt Meadows (CYPK)</div>
       <h2 style="margin-top:14px;">The YPK Ecosystem</h2>
-      <p class="practice-sub">Five tenant operations mapped as one working airfield. Select a node to read its asset spec, lighting calibration, and privacy status.</p>
+      <p class="practice-sub">One shoot, six businesses. Aircraft, hangars and interiors across a single working airfield.</p>
 
       <div class="metar-bar">
         <span class="dot"></span>
@@ -803,32 +803,41 @@
         <span class="label" style="margin-left:auto;" id="ypk-metar-note">Reference reading — attempting live feed</span>
       </div>
 
-      <div id="airfield-map" style="height: 450px; background: var(--slate); margin-top: 28px; border: 1px solid var(--zinc); z-index: 1;"></div>
-      <p class="label" style="margin-top:10px;">Schematic placement — illustrative node positions within the CYPK airfield footprint, not surveyed coordinates. Click a marker to inspect.</p>
-
-      <div class="inspector">
-        <div class="eyebrow" id="insp-eyebrow">Active Node // YPK Airport Society</div>
-        <div class="inspector-grid">
-          <div class="field">
-            <span class="label">Asset spec</span>
-            <div class="val" id="insp-spec">Main terminal &amp; admin / spatial architecture</div>
-          </div>
-          <div class="field">
-            <span class="label">Lighting calibration</span>
-            <div class="val">5500K CAT16 + X-Rite target</div>
-          </div>
-          <div class="field">
-            <span class="label">Exposure</span>
-            <div class="val">-1.0 EV highlight protection</div>
-          </div>
-          <div class="field">
-            <span class="label">Privacy status</span>
-            <div class="val" id="insp-privacy">Public frontage — standard clearance</div>
-          </div>
-        </div>
-        <div class="cta-row">
-          <a href="#commission" class="btn btn-solid">Order Fine-Art Acrylic Display — $1,850 CAD</a>
-        </div>
+      <ul class="partner-grid">
+        <li class="partner-card">
+          <span class="partner-role">Airport community society</span>
+          <h3>YPK Airport Society</h3>
+          <a href="https://www.instagram.com/flyypk/" target="_blank" rel="noopener">@flyypk</a>
+        </li>
+        <li class="partner-card">
+          <span class="partner-role">Helicopter operator</span>
+          <h3>SKY Helicopters</h3>
+          <a href="https://www.instagram.com/skyhelicopters/" target="_blank" rel="noopener">@skyhelicopters</a>
+        </li>
+        <li class="partner-card">
+          <span class="partner-role">FBO — aircraft handling</span>
+          <h3>Integrity Flight Support</h3>
+          <a href="https://www.instagram.com/integrityflightsupport/" target="_blank" rel="noopener">@integrityflightsupport</a>
+        </li>
+        <li class="partner-card">
+          <span class="partner-role">Aircraft management</span>
+          <h3>Airborne Management</h3>
+          <a href="https://www.instagram.com/airborne_management/" target="_blank" rel="noopener">@airborne_management</a>
+        </li>
+        <li class="partner-card">
+          <span class="partner-role">Helicopter overhaul</span>
+          <h3>Heliproducts</h3>
+          <a href="https://www.instagram.com/heliproducts/" target="_blank" rel="noopener">@heliproducts</a>
+        </li>
+        <li class="partner-card">
+          <span class="partner-role">Flight training</span>
+          <h3>Vancouver Aviation College</h3>
+          <a href="https://www.instagram.com/vancouveraviationcollege/" target="_blank" rel="noopener">@vancouveraviationcollege</a>
+        </li>
+      </ul>
+      <p class="label" style="margin-top:14px;">Shot on location at Pitt Meadows Airport, BC — aircraft, hangars and interiors.</p>
+      <div class="cta-row" style="margin-top:26px;">
+        <a href="#commission" class="btn btn-solid">Order Fine-Art Acrylic Display — $1,850 CAD</a>
       </div>
     </div>
   </section>
@@ -1023,14 +1032,6 @@
 
   /* ---------------- data ---------------- */
 
-  var NODES = {
-    society:      { name:'YPK Airport Society',      spec:'Main terminal &amp; admin / spatial architecture',                         privacy:'Public frontage — standard clearance' },
-    sky:          { name:'Sky Helicopters',           spec:'Bell 429 / H125 fleet — reg. C-GXNP / hangar light',                       privacy:'Registration cleared — written approval on file' },
-    integrity:    { name:'Integrity Flight Support',  spec:'VIP FBO lounge &amp; apron row',                                            privacy:'Client aircraft — approval required per tail' },
-    airborne:     { name:'Airborne Management',       spec:'Cirrus fleet — reg. C-OWVA / glass cockpit avionics',                      privacy:'Registration cleared — written approval on file' },
-    heliproducts: { name:'Heliproducts Overhaul',     spec:'15,000 sq ft MRO hangar / turbine joinery',                                 privacy:'Shop floor — identifiers blinded by default' }
-  };
-
   var HUBS_BY_SECTOR = {
     aviation:     ['CYUL (Montréal-Trudeau)','CYHU (Saint-Hubert)','CYYZ (Pearson)','CYTZ (Billy Bishop)','YVR / YPK (Vancouver)','CYYC (Calgary)','EGLF (London Farnborough)','OMDW (Dubai VVIP)'],
     marine:       ['Old Port MTL','Port Credit (GTA)','Coal Harbour (Vancouver)','Muskoka','Monaco','Palma','Cannes (Vieux Port/Canto)','Dubai Harbour','Private slip'],
@@ -1068,77 +1069,6 @@
     mobileNav.querySelectorAll('a').forEach(function(a){
       a.addEventListener('click', function(){ mobileNav.classList.remove('open'); });
     });
-  }
-
-  /* ---------------- airfield schematic ---------------- */
-
-  var inspEyebrow = document.getElementById('insp-eyebrow');
-  var inspSpec = document.getElementById('insp-spec');
-  var inspPrivacy = document.getElementById('insp-privacy');
-  var airfieldMarkers = {};
-
-  function selectNode(id){
-    var node = NODES[id];
-    if (!node) return;
-    inspEyebrow.innerHTML = 'Active Node // ' + node.name;
-    inspSpec.innerHTML = node.spec;
-    inspPrivacy.textContent = node.privacy;
-    Object.keys(airfieldMarkers).forEach(function(k){
-      airfieldMarkers[k].setStyle({ fillOpacity: k === id ? 0.95 : 0.45, radius: k === id ? 10 : 8 });
-    });
-  }
-
-  /* ---------------- airfield schematic map (Leaflet) ---------------- */
-
-  var mapEl = document.getElementById('airfield-map');
-  if (mapEl && window.L) {
-    var CYPK_CENTER = [49.2161, -122.7095];
-    var map = L.map('airfield-map', { scrollWheelZoom: false }).setView(CYPK_CENTER, 14);
-
-    // Free OpenStreetMap raster tiles, no API key or account required.
-    // CSS below inverts/hue-shifts the tile pane to a dark basemap that
-    // matches the site palette, instead of paying for a dark-tile vendor.
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors',
-      subdomains: 'abc',
-      maxZoom: 19
-    }).addTo(map);
-
-    // Real reference airports, parsed from the embedded GeoJSON.
-    try {
-      var geoEl = document.querySelector('script[type="application/geo+json"]');
-      var geo = geoEl ? JSON.parse(geoEl.textContent) : null;
-      if (geo && geo.features) {
-        geo.features.forEach(function(f){
-          var c = f.geometry.coordinates; // [lon, lat]
-          L.circleMarker([c[1], c[0]], { radius: 5, color: '#8E929B', weight: 1, fillColor: '#8E929B', fillOpacity: 0.6 })
-            .addTo(map)
-            .bindTooltip(f.properties.icao ? (f.properties.icao + ' · ' + f.properties.name) : f.properties.name);
-        });
-      }
-    } catch (e) { /* malformed geojson — skip reference markers, map still renders */ }
-
-    // YPK tenant nodes — illustrative schematic positions within the CYPK
-    // footprint (see on-page caption); not surveyed building coordinates.
-    var NODE_OFFSETS = {
-      society:      [0.0009, -0.0012],
-      sky:          [-0.0011, 0.0008],
-      integrity:    [0.0011, 0.0011],
-      airborne:     [-0.0009, -0.0009],
-      heliproducts: [0.0005, 0.0017]
-    };
-
-    Object.keys(NODES).forEach(function(id){
-      var off = NODE_OFFSETS[id] || [0, 0];
-      var marker = L.circleMarker([CYPK_CENTER[0] + off[0], CYPK_CENTER[1] + off[1]], {
-        radius: 8, color: '#C9B37E', weight: 2, fillColor: '#C9B37E', fillOpacity: 0.45
-      }).addTo(map);
-      marker.bindTooltip(NODES[id].name);
-      marker.on('click', function(){ selectNode(id); });
-      airfieldMarkers[id] = marker;
-    });
-
-    selectNode('society');
   }
 
   /* ---------------- commission wizard ---------------- */
