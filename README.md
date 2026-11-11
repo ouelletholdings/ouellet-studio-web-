@@ -7,7 +7,7 @@ Light reveals the subject, material gives it character, motion gives it life.
 
 ## About
 
-Ouellet Studio produces cinematic visual monographs — photography and video — across five practice sectors, in priority order:
+Ouellet Studio produces photography across five practice sectors, in priority order:
 
 1. **Yachting & Marine** (primary) — superyachts, day-cruisers, teak joinery, helm detail, running hull motion.
 2. **Executive Aviation** — heavy jets, turboprops, glass cockpits, hangar event light.
@@ -23,7 +23,7 @@ Based in Montréal. On-location work in Vancouver. Travel on request. Remote dig
 
 ## Pricing
 
-Services span **$1,250 – $18,000 CAD**, from single-session showcase passes through heavy asset/facility monographs to enterprise fleet retainers and custom interactive 3D digital twins. Exact bands are listed in the commission form on the site.
+Services span **$1,250 – $18,000 CAD**, from single-session showcase passes through heavy asset/facility commissions to custom interactive 3D digital twins. Exact bands are listed in the commission form on the site.
 
 ## Contact & SLA
 
@@ -31,7 +31,7 @@ Commission inquiries submitted through the site's intake form are read and answe
 
 ## Technical / production standards
 
-- Every deliverable is color-calibrated to a **5500K CAT16 daylight target** in darktable before any creative grade is applied.
+- Every deliverable is color-calibrated to a **daylight target** before any creative grade is applied.
 - Aircraft registration marks, vessel names, and other identifying marks are **private by default** and are only published with the owner's or operator's written approval on file.
 - Copyright in all imagery remains with Ouellet Studio; partner or client use is licensed, with terms set out in a delivery note rather than in file metadata.
 
@@ -48,7 +48,7 @@ Commission inquiries submitted through the site's intake form are read and answe
 | `deck.pdf` | Single-page Capabilities Brief, print-ready (8.5x11). Hero hull photo, six practice sectors, production standards, investment spectrum and contact. Linked from the footer. |
 | `index/carbon-fiber/index.html` | Standalone material-index page (`/index/carbon-fiber`) — real editorial content on carbon fiber weaves and how the studio lights/shoots them. Listed in `sitemap.xml`. |
 | `index/bombardier-global-7500/index.html` | Standalone airframe-index page (`/index/bombardier-global-7500`) — shoot-planning reference for the Global 7500. Listed in `sitemap.xml`. |
-| `private/index.html` | "Client Vault" access-request page (`/private`, linked from the footer). Honest request-access form, not a real login: submits to the same Formspree endpoint as the commission wizard, with a `mailto:` fallback if the POST fails. `noindex`'d. |
+| `private/index.html` | "Client Delivery Portal" access-request page (`/private`, linked from the footer). Honest request-access form, not a real login: submits to the same Formspree endpoint as the commission wizard, with a `mailto:` fallback if the POST fails. `noindex`'d. |
 | `README.md` | This file. |
 
 ## Deployment

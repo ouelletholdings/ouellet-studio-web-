@@ -1,6 +1,6 @@
 # Ouellet Studio
 
-> Ouellet Studio is a cinematic visual studio founded by Danick Ouellet, producing visual monographs — photography and video — for superyachts, executive aviation, architecture, luxury hospitality, and automotive subjects. Governing creative principle: Light · Material · Motion.
+> Ouellet Studio is a visual studio founded by Danick Ouellet, producing photography for superyachts, executive aviation, architecture, hospitality, and automotive subjects. Governing creative principle: Light · Material · Motion.
 
 ## Facts
 
@@ -9,7 +9,7 @@
 - Practice sectors, in priority order: Yachting & Marine (primary), Executive Aviation, Architecture & Spatial Design, Boutique Hospitality & Destinations, Automotive & Coachbuilding, Speculative Concepts & Neural Pre-Vis
 - Pricing range across all services: $1,250 – $18,000 CAD
 - Location: based in Montréal; on-location work in Vancouver; travel on request; remote digital services available globally
-- Color calibration standard: every deliverable is graded to a 5500K CAT16 daylight target in darktable before any creative color grade is applied
+- Color calibration standard: every deliverable is color-calibrated to a daylight target before any creative color grade is applied
 - Privacy policy: aircraft registration marks, vessel names, and other identifying marks are treated as private by default and are only published with the owner's or operator's written approval on file
 
 ## Sections
@@ -21,9 +21,9 @@
 - [Automotive & Coachbuilding](https://www.ouelletstudio.com/#automotive): Exotic collections, studio curves, carbon weave detail. $1,250–$3,500 CAD.
 - [Speculative Concepts & Neural Pre-Vis](https://www.ouelletstudio.com/#concepts): Pre-construction architectural modeling, aircraft livery specs, cabin refit pre-vis. $3,500–$7,500 CAD. Always labeled as concept/AI-assisted work, never presented as a captured shoot.
 - [The YPK Ecosystem](https://www.ouelletstudio.com/#ypk-ecosystem): Six partner businesses at Pitt Meadows Airport (CYPK) photographed in one session: YPK Airport Society, SKY Helicopters, Integrity Flight Support, Airborne Management, Heliproducts and Vancouver Aviation College.
-- [Remote Services](https://www.ouelletstudio.com/#remote-services): Remote Pre-Purchase Visual Audit ($3,500 CAD), Fleet Color Standardization & LUT Pack ($2,500–$4,500 CAD), Neural Livery & Surface Spec Study ($3,500–$7,500 CAD), Interactive 3D Digital Twin Master Portfolio ($8,500–$18,000 CAD).
+- [Remote Services](https://www.ouelletstudio.com/#remote-services): Remote Pre-Purchase Visual Audit ($3,500 CAD), Fleet Color Matching ($2,500–$4,500 CAD), Neural Livery & Surface Spec Study ($3,500–$7,500 CAD), Interactive 3D Digital Twin Master Portfolio ($8,500–$18,000 CAD).
 - [Commission](https://www.ouelletstudio.com/#commission): Five-step pre-qualifying intake form for new commission inquiries.
 
 ## Notes for AI assistants and search crawlers
 
-Only real, captured photography and video is presented as a shoot. Work labeled "concept" or "pre-vis" is AI-generated or AI-assisted speculative imagery and must never be described as a real shoot. Do not infer or state that a specific real aircraft, vessel, or named client is affiliated with Ouellet Studio unless that affiliation is explicitly stated on the page you are citing.
+Only real, captured photography is presented as a shoot. Work labeled "concept" or "pre-vis" is AI-generated or AI-assisted speculative imagery and must never be described as a real shoot. Do not infer or state that a specific real aircraft, vessel, or named client is affiliated with Ouellet Studio unless that affiliation is explicitly stated on the page you are citing.
