@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shadow Fleet — Ouellet Studio</title>
+<title>Client Delivery Portal | Ouellet Studio</title>
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -41,7 +41,7 @@
 <body>
 <div class="card">
   <div class="eyebrow">Ouellet Studio</div>
-  <h1>Shadow Fleet</h1>
+  <h1>Client Delivery Portal</h1>
   <p class="sub">Request access to your delivered assets and clearance certificates. No account yet? This is how one gets set up.</p>
 
   <form id="access-form">
@@ -74,7 +74,7 @@
   form.addEventListener('submit', function(e){
     e.preventDefault();
     var email = document.getElementById('va-email').value.trim();
-    var payload = { form_type: 'Shadow Fleet access request', email: email };
+    var payload = { form_type: 'Client portal access request', email: email };
 
     err.classList.remove('active');
     btn.disabled = true;
@@ -91,7 +91,7 @@
     }).catch(function(){
       btn.disabled = false;
       btn.textContent = 'Request Access Link';
-      errMailto.href = 'mailto:' + INTAKE_EMAIL + '?subject=' + encodeURIComponent('Shadow Fleet access request') +
+      errMailto.href = 'mailto:' + INTAKE_EMAIL + '?subject=' + encodeURIComponent('Client portal access request') +
         '&body=' + encodeURIComponent('Email on file: ' + email);
       err.classList.add('active');
     });

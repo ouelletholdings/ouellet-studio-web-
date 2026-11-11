@@ -10,7 +10,7 @@ Light reveals the subject, material gives it character, motion gives it life.
 Ouellet Studio produces cinematic visual monographs — photography and video — across five practice sectors, in priority order:
 
 1. **Yachting & Marine** (primary) — superyachts, day-cruisers, teak joinery, helm detail, running hull motion.
-2. **Executive Aviation** — heavy jets, turboprops, glass cockpits, hangar event light, 4K gimbal passes.
+2. **Executive Aviation** — heavy jets, turboprops, glass cockpits, hangar event light.
 3. **Architecture & Spatial Design** — modern compounds, hangar headquarters, private terminals.
 4. **Boutique Hospitality & Destinations** — boutique private terminals, estate garages, alpine lodges.
 5. **Automotive & Coachbuilding** — exotic collections, studio curves, carbon weave detail.
@@ -19,7 +19,7 @@ A sixth, clearly labeled category — **Speculative Concepts & Neural Pre-Vis** 
 
 ## Base hubs
 
-Vancouver (YVR/YPK) · Montreal (CYUL/CYHU) · Toronto (CYYZ/CYTZ) · Calgary (CYYC/CYBW) · London (EGLF/EGKB) · Dubai (OMDW) · Monaco (Port Hercule)
+Based in Montréal. On-location work in Vancouver. Travel on request. Remote digital services available globally.
 
 ## Pricing
 
@@ -27,7 +27,7 @@ Services span **$1,250 – $18,000 CAD**, from single-session showcase passes th
 
 ## Contact & SLA
 
-Commission inquiries submitted through the site's intake form are reviewed by the Creative Director and answered **within 24–48 hours**.
+Commission inquiries submitted through the site's intake form are read and answered personally by Danick Ouellet.
 
 ## Technical / production standards
 
