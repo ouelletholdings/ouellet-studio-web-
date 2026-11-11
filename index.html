@@ -240,6 +240,9 @@
   /* ---------- practice sections ---------- */
   .practice-sub{margin-top:14px; color:var(--muted); font-size:15px; max-width:48ch;}
   .meta-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:1px; background:var(--zinc); margin-top:36px; border:1px solid var(--zinc);}
+  .yacht-plates{display:grid; grid-template-columns:575fr 1080fr; gap:12px;}
+  .yacht-plates .media-card{aspect-ratio:auto;}
+  @media (max-width:760px){.yacht-plates{grid-template-columns:1fr;}}
   .meta-cell{background:var(--ink); padding:20px 22px; min-width:0;}
   .meta-cell .label{margin-bottom:10px; display:block;}
   .meta-cell .val{font-size:14px; color:var(--bone); line-height:1.7;}
@@ -490,6 +493,22 @@
               </picture>
             </div>
             <figcaption>Teak cap rail, stainless stanchions.</figcaption>
+          </figure>
+        </div>
+        <div class="yacht-plates">
+          <figure>
+            <div class="media-card"><picture>
+              <source type="image/webp" srcset="/images/yacht-photography-stainless-mooring-cleat-teak-deck.webp">
+              <img src="/images/yacht-photography-stainless-mooring-cleat-teak-deck.jpg" width="575" height="720" alt="Polished stainless steel mooring cleat on a teak deck between two rail stanchions" loading="lazy" decoding="async">
+            </picture></div>
+            <figcaption>Stainless and teak. Mooring cleat.</figcaption>
+          </figure>
+          <figure>
+            <div class="media-card"><picture>
+              <source type="image/webp" srcset="/images/yacht-photography-red-ensign-motor-yacht-upper-deck-rails.webp">
+              <img src="/images/yacht-photography-red-ensign-motor-yacht-upper-deck-rails.jpg" width="1080" height="720" alt="Red ensign flying above the upper deck rails of a motor yacht against a deep blue sky" loading="lazy" decoding="async">
+            </picture></div>
+            <figcaption>Red ensign. Upper deck rails.</figcaption>
           </figure>
         </div>
         <p class="work-note">Photographed by Ouellet Studio.</p>
